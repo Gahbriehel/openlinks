@@ -1,0 +1,78 @@
+:root {
+    /* General */
+    --primary-accent: #5db34f;
+    --secondary-accent: #28743b;
+
+    /* Backgrounds */
+    --main-bg-color: #f5f9f5;
+    --nav-bg-color: #204729;
+    --footer-bg-color: #1b3923;
+    --input-field-bg: #eaf5e9;
+
+    /* Text colors */
+    --primary-text-color: #333333;
+    --secondary-text-color: #666666;
+    --light-text: #ffffff;
+
+    /* Borders and Dividers */
+    --border-color: #d6e4d6;
+
+    /* Notifications / Highlights */
+    --error-warning: #d9534f;
+    --success-highlight: #3c763d;
+
+    --button-color: #5db34f;
+    --button-hover: #28743b;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.nav_container {
+    width: 100%;
+    background: var(--nav-bg-color)
+
+}
+
+.nav_container .nav_top {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -40px 0;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    /* margin-top: -50px; */
+}
+
+.search_box input {
+    width: 15rem;
+    padding: 10px 4px;
+    border-radius: 3rem;
+    margin-right: 10px;
+    background: var(--input-field-bg)
+
+}
+
+.search_box button {
+    padding: 8px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cart_btn button {
+    padding: 10px 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+
+}
