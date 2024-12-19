@@ -9,6 +9,8 @@ import { MdOutlineCategory } from "react-icons/md";
 import { ImPriceTags } from "react-icons/im";
 import { MdFilterAlt } from "react-icons/md";
 import { IoMdPricetag } from "react-icons/io";
+import { RiArrowDropDownLine } from "react-icons/ri";
+
 
 
 
@@ -24,10 +26,10 @@ const Nav = () => {
             <div className='nav_container'>
                 <div className='nav_top'>
                     <div className='logo'>
-                        <img src='images/profile.png' alt='logo'></img>
+                       <Link to='/'><img src='images/profile.png' alt='logo'></img></Link> 
                     </div>
                     <div className='search_box'>
-                        <input type='text' value='' placeholder='Search'></input>
+                        <input type='text' /* value='' */placeholder='Search'></input>
                         <button><FaSearch /></button>
                     </div>
                     <div className='cart_btn'>
@@ -38,12 +40,12 @@ const Nav = () => {
                 <div className='nav_bottom'>
                     <ul>
                         <li><Link to='/' className='link'><IoMdHome />Home</Link></li>
-                        <li><Link to='/brands' className='link'><IoIosLaptop />Laptop Brands</Link></li>
-                        <li><Link to='/recommendations' className='link'><FaRankingStar />Recommendations</Link></li>
-                        <li><Link to='/categories' className='link'><MdOutlineCategory />Categ</Link></li>
-                        <li><Link to='/price_range' className='link'><ImPriceTags />Price Range</Link></li>
-                        <li><Link to='/specific' className='link'><MdFilterAlt />Specific</Link></li>
-                        <li><Link to='/sale' className='link'><IoMdPricetag />SALE</Link></li>
+                        <li><Link to='/brands' className='link'><IoIosLaptop /> Laptop Brands</Link></li>
+                        <li><Link to='/recommendations' className='link'><FaRankingStar /> Recommendations</Link></li>
+                        <li><Link to='/categories' className='link'><MdOutlineCategory /> Categ  <RiArrowDropDownLine/></Link></li>
+                        <li><Link to='/price_range' className='link'><ImPriceTags /> Price Range  <RiArrowDropDownLine/></Link></li>
+                        <li><Link to='/specific' className='link'><MdFilterAlt /> Specific  <RiArrowDropDownLine/></Link></li>
+                        <li><Link to='/sale' className='link'><IoMdPricetag /> SALE</Link></li>
 
                     </ul>
                 </div>

@@ -2,6 +2,7 @@
     /* General */
     --primary-accent: #5db34f;
     --secondary-accent: #28743b;
+    --tertiary-accent: #9cd432;
 
     /* Backgrounds */
     --main-bg-color: #f5f9f5;
@@ -51,6 +52,7 @@
     width: 200px;
     height: 200px;
     margin-left: 50px;
+    margin-right: -50px;
     /* margin-top: -50px; */
 }
 
@@ -70,9 +72,40 @@
     transition: 0.5s;
 }
 
+.search_box button:hover {
+    background: var(--button-hover);
+}
+
 .cart_btn button {
     padding: 10px 20px;
     margin-right: 20px;
     border-radius: 20px;
 
+}
+
+.cart_btn button:hover {
+    background: var(--button-hover);
+    color: var(--light-text);
+}
+
+.nav_bottom ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+}
+
+.nav_bottom ul li {
+    list-style: none;
+}
+
+.nav_bottom ul li .link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-accent);
+    transition: 0.5s;
+}
+
+.nav_bottom ul li .link:hover {
+    color: var(--tertiary-accent);
+    font-weight: 700;
 }
