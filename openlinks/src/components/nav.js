@@ -42,7 +42,7 @@ const Nav = () => {
                         <li><Link to='/' className='link'><IoMdHome />Home</Link></li>
                         <li><Link to='/brands' className='link'><IoIosLaptop /> Laptop Brands</Link></li>
                         <li><Link to='/recommendations' className='link'><FaRankingStar /> Recommendations</Link></li>
-                        <li><Link to='/categories' className='link'><MdOutlineCategory /> Categ  <RiArrowDropDownLine/></Link></li>
+                        <li><Link to='/categories' className='link'><MdOutlineCategory /> Categories  <RiArrowDropDownLine/></Link></li>
                         <li><Link to='/price_range' className='link'><ImPriceTags /> Price Range  <RiArrowDropDownLine/></Link></li>
                         <li><Link to='/specific' className='link'><MdFilterAlt /> Specific  <RiArrowDropDownLine/></Link></li>
                         <li><Link to='/sale' className='link'><IoMdPricetag /> SALE</Link></li>

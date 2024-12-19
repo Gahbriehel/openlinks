@@ -12,20 +12,30 @@ const Footer = () => {
         <>
             <div className='footer_container'>
                 <div className='footer_top'>
-                    <p>Stay up-to-date with the latest laptops and deals! Subscribe to our newsletter now!</p>
-                    <input type='text' placeholder='Enter your email'></input>
-                    <button>Subscribe</button>
+                    <div className='footer_top_left'>
+                        <p>Stay up-to-date with the latest laptops and deals! Subscribe to our newsletter now!</p>
+                    </div>
+                    <div className='footer_top_right'>
+                        <input type='email' placeholder='Enter your email'></input>
+                        <button>Subscribe</button>
+                    </div>
+
                 </div>
                 <hr></hr>
                 <div className='footer_bottom'>
                     <div className='footer_bottom_left'>
-                        <div className='logo'>
+                        <div className='footer_logo'>
                             <Link to='/'><img src='images/profile.png' alt='logo'></img></Link>
                         </div>
                         <div className='socials'>
-                            <Link><FaLinkedin /></Link>
-                            <Link><BsTwitterX /></Link>
-                            <Link><FaInstagram /></Link>
+                            <ul>
+                                <li><Link to='https://www.linkedin.com' className='social_link'><FaLinkedin /></Link></li>
+                                <li><Link to='https://www.twitter.com' className='social_link'><BsTwitterX /></Link></li>
+                                <li><Link to='https://www.instagram.com' className='social_link'><FaInstagram /></Link></li>
+                            </ul>
+                            
+                            
+                            
                         </div>
                     </div>
                     <div className='footer_bottom_right'>
@@ -42,8 +52,9 @@ const Footer = () => {
                             <p>subscriptions</p>
                         </div>
                         <div className='footer_col_3'>
-                        <p>support@openlinkstech</p>
-                        <p>+234 123 456 789</p>
+                            <h6>contact us</h6>
+                            <p>support@openlinkstech</p>
+                            <p>+234 123 456 789</p>
                         </div>
                     </div>
                 </div>
