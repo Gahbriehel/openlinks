@@ -53,7 +53,7 @@ const Footer = () => {
                         </div>
                         <div className='footer_col_3'>
                             <h6>contact us</h6>
-                            <p>support@openlinkstech</p>
+                            <p className='footer_link'>support@openlinkstech</p>
                             <p>+234 123 456 789</p>
                         </div>
                     </div>

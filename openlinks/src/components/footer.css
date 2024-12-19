@@ -81,6 +81,7 @@
 .footer_bottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -90,6 +91,7 @@
     margin-left: 50px;
     margin-right: -50px;
     margin-bottom: -85px;
+    margin-top: -20px;
 
 }
 
@@ -118,13 +120,32 @@
 
 .footer_bottom_right {
     display: flex;
+    margin-right: 10px;
 }
 
 .footer_bottom_right p,
 .footer_bottom_right h6 {
     text-transform: capitalize;
+    color: var(--primary-accent);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.footer_bottom_right h6  {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.footer_bottom_right p {
+    font-size: 13px;
+}
+
+.footer_link {
+    text-decoration: underline;
 }
 
 hr {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--secondary-accent);
 }
