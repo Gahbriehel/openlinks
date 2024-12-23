@@ -17,6 +17,7 @@
 
     /* Borders and Dividers */
     --border-color: #d6e4d6;
+    --border-orange: rgb(204, 137, 11);
 
     /* Notifications / Highlights */
     --error-warning: #d9534f;
@@ -108,4 +109,8 @@
 .nav_bottom ul li .link:hover {
     color: var(--tertiary-accent);
     font-weight: 700;
+}
+
+.nav_bottom {
+    border-bottom: 2px solid var(--border-orange);
 }
