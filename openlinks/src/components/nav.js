@@ -4,7 +4,7 @@ import './nav.css'
 import { FaSearch } from 'react-icons/fa';
 import { IoMdHome } from "react-icons/io";
 import { IoIosLaptop } from "react-icons/io";
-import { FaRankingStar } from "react-icons/fa6";
+// import { FaRankingStar } from "react-icons/fa6";
 import { MdOutlineCategory } from "react-icons/md";
 import { ImPriceTags } from "react-icons/im";
 import { MdFilterAlt } from "react-icons/md";
