@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './components/nav';
 import { BrowserRouter } from 'react-router-dom'
 import Footer from './components/footer';
+import Rout from './components/rout';
 // import Rout from './components/rout';
 
 const App = () => {
@@ -9,8 +10,8 @@ const App = () => {
     <>
       <BrowserRouter>
         <Nav />
+        <Rout/>
         <Footer/>
-        {/* <Rout/> */}
       </BrowserRouter>
     </>
   )
