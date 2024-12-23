@@ -1,0 +1,126 @@
+:root {
+    /* General */
+    --primary-accent: #5db34f;
+    --secondary-accent: #28743b;
+    --tertiary-accent: #9cd432;
+
+    /* Backgrounds */
+    --main-bg-color: #f5f9f5;
+    --nav-bg-color: #204729;
+    --footer-bg-color: #1b3923;
+    --input-field-bg: #eaf5e9;
+
+    /* Text colors */
+    --primary-text-color: #333333;
+    --secondary-text-color: #666666;
+    --light-text-color: #ffffff;
+    --main-text-color: #a99c54;
+    --sup-text-color: #af9e3c;
+
+    /* Borders and Dividers */
+    --border-color: #d6e4d6;
+    --border-orange: rgb(204, 137, 11);
+    --border-light-orange: rgb(218, 170, 83);
+
+    /* Notifications / Highlights */
+    --error-warning: #d9534f;
+    --success-highlight: #3c763d;
+
+    --button-color: #5db34f;
+    --button-hover: #28743b;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.contact_container {
+    width: 100%;
+    /* background: var(--nav-bg-color) */
+    background: var(--nav-bg-color);
+    color: var(--light-text-color);
+}
+
+.contact_container .contact_container_top {
+    width: 50%;
+    margin: auto;
+}
+
+.contact_container .contact_container_top .get_in_touch h1 {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.contact_container .contact_container_top .get_in_touch p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.get_in_touch_btns {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.get_in_touch_btns button {
+    padding: 20px 40px;
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.get_in_touch_btns .link {
+    text-decoration: none;
+    color: var(--button-hover);
+}
+
+.get_in_touch_btns .link:hover {
+    color: var(--nav-bg-color);
+
+}
+
+.faq_links  {
+    padding: 20px 10px;
+}
+
+.faq_links .link {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+.faq_links ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.faq_links ul li {
+    list-style: none;
+    width: 50%;
+}
+
+.faq_links ul li article {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    padding: 17px 20px;
+    margin: 8px 5px;
+    border: 1px solid var(--border-light-orange);
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.faq_links ul li article:hover {
+    border: 1px solid var(--secondary-accent);
+    transition: ease .6s;
+
+}
