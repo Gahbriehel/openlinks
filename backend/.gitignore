@@ -1,0 +1,4 @@
+node_*
+.vscode
+.env
+package-lock.json
