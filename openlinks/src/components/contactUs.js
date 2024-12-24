@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import './nav.css'
 import './contactUs.css'
 import { FaAngleRight } from "react-icons/fa";
+import { PiPackage } from "react-icons/pi";
+import { RiVerifiedBadgeLine, RiSecurePaymentFill } from "react-icons/ri";
+
 
 
 
@@ -71,6 +74,50 @@ const ContactUs = () => {
                                 </Link>
                             </li>
                         </ul>
+                    </div>
+                </div>
+                <div className='contact_container_mid'>
+                    <h1>Form goes here</h1>
+                </div>
+                <div className='contact_container_bottom'>
+                    <div className='join_newsletter'>
+                        <h1>Join our newsletter</h1>
+                        <p>Stay up-to-date with new collections and deals.</p>
+                        <div className='newsletter_input'>
+                            <input type='email' placeholder='Your email'></input>
+                            <button>Send</button>
+                        </div>
+                    </div>
+                    <div className='contact_container_bottom2'>
+                        <div className='newsletter_perks'>
+                            <div className='perk'>
+                                <div className='perk_icon'>
+                                    <PiPackage />
+                                </div>
+                                <div className='perk_text'>
+                                    <h5>Free shipping</h5>
+                                    <p>Local orders above ₦200k</p>
+                                </div>
+                            </div>
+                            <div className='perk'>
+                                <div className='perk_icon'>
+                                    <RiVerifiedBadgeLine />
+                                </div>
+                                <div className='perk_text'>
+                                    <h5>2 Year Warranty</h5>
+                                    <p>On Every Product</p>
+                                </div>
+                            </div>
+                            <div className='perk'>
+                                <div className='perk_icon'>
+                                    <RiSecurePaymentFill />
+                                </div>
+                                <div className='perk_text'>
+                                    <h5>Secure Checkout</h5>
+                                    <p>Enhanced Payment</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
