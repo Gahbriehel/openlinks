@@ -5,7 +5,7 @@ import './contactUs.css'
 import { FaAngleRight } from "react-icons/fa";
 import { PiPackage } from "react-icons/pi";
 import { RiVerifiedBadgeLine, RiSecurePaymentFill } from "react-icons/ri";
-
+import ControlledComponent from './form'
 
 
 
@@ -18,9 +18,9 @@ const ContactUs = () => {
                         <h1>Get in Touch</h1>
                         <p>We want to hear from you. Please feel free to email Orders@OpenLinks.com or fill out the form below. Please allow 1-3 business days to respond.</p>
                         <div className='get_in_touch_btns'>
-                            <button><Link className='link' to='/wholesale'>wholesale</Link></button>
-                            <button><Link className='link' to='customOrders'>custom orders</Link></button>
-                            <button><Link className='link' to='shippingInfo'>shipping info</Link></button>
+                            <Link className='link' to='/wholesale'><button>wholesale</button></Link>
+                            <Link className='link' to='customOrders'><button>custom orders</button></Link>
+                            <Link className='link' to='shippingInfo'><button>shipping info</button></Link>
                         </div>
                     </div>
                     <div className='faq_links'>
@@ -78,6 +78,7 @@ const ContactUs = () => {
                 </div>
                 <div className='contact_container_mid'>
                     <h1>Form goes here</h1>
+                    <ControlledComponent/>
                 </div>
                 <div className='contact_container_bottom'>
                     <div className='join_newsletter'>

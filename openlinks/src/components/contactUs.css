@@ -77,16 +77,11 @@
     border-radius: 15px;
     cursor: pointer;
     transition: 0.5s;
-}
-
-.get_in_touch_btns .link {
-    text-decoration: none;
     color: var(--button-hover);
 }
 
-.get_in_touch_btns .link:hover {
+.get_in_touch_btns button:hover {
     color: var(--nav-bg-color);
-
 }
 
 .faq_links  {
