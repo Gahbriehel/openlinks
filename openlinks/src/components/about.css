@@ -105,7 +105,7 @@
 .about_section3 {
     width: 70%;
     margin: auto;
-   
+    margin-bottom: 60px;
 }
 
 .content {
@@ -117,6 +117,11 @@
     height: 450px;
     border-radius: 10px;
     margin-top: -10px;
+}
+
+.content .content_image .to_saturate {
+    filter: saturate(50%);
+
 }
 
 .content .content_text {
