@@ -5,7 +5,7 @@ import './contactUs.css'
 import { FaAngleRight } from "react-icons/fa";
 import { PiPackage } from "react-icons/pi";
 import { RiVerifiedBadgeLine, RiSecurePaymentFill } from "react-icons/ri";
-import ControlledComponent from './form'
+import ControlledComponent from './contactForm'
 
 
 
