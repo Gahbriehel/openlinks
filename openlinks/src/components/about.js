@@ -58,13 +58,14 @@ const About = () => {
           </div>
           <div className='content'>
             <div className='content_text'>
-              <h2>Value is a Big Deal</h2>
-              <h3>Affordable Tech Without Compromise</h3>
-              <p>We believe that everyone deserves access to the latest technology without breaking the bank. At OpenLinks, you'll find competitive prices across our entire catalog.</p>
-              <p>By partnering directly with manufacturers and utilizing efficient supply chain practices, we pass the savings directly to you. Whether it's a budget-friendly laptop for school or a premium device for work, you'll always find value here.</p>
+              <h2>Meet the Experts</h2>
+              <h3>Guidance You Can Trust</h3>
+              <p>At OpenLinks, our team includes tech enthusiasts, product testers, and industry experts. We understand that choosing the right laptop can feel overwhelming, so we're here to help.</p>
+              <p>From detailed product reviews to personalized recommendations, we're dedicated to connecting you with the perfect device. Whether you're a beginner or a seasoned tech user, our resources, guides, and comparison tools make the process seamless.</p>
             </div>
             <div className='content_image'>
-              <img className='to_saturate' src='/images/laptop-shopping-trolley.jpg' alt='laptop with shopping cart'></img>
+              <img src='/images/team-with-laptop.jpg
+          ' alt='laptop with shopping cart'></img>
             </div>
           </div>
           <div className='content'>
@@ -80,14 +81,13 @@ const About = () => {
           </div>
           <div className='content'>
             <div className='content_text'>
-              <h2>Meet the Experts</h2>
-              <h3>Guidance You Can Trust</h3>
-              <p>At OpenLinks, our team includes tech enthusiasts, product testers, and industry experts. We understand that choosing the right laptop can feel overwhelming, so we're here to help.</p>
-              <p>From detailed product reviews to personalized recommendations, we're dedicated to connecting you with the perfect device. Whether you're a beginner or a seasoned tech user, our resources, guides, and comparison tools make the process seamless.</p>
+              <h2>Value is a Big Deal</h2>
+              <h3>Affordable Tech Without Compromise</h3>
+              <p>We believe that everyone deserves access to the latest technology without breaking the bank. At OpenLinks, you'll find competitive prices across our entire catalog.</p>
+              <p>By partnering directly with manufacturers and utilizing efficient supply chain practices, we pass the savings directly to you. Whether it's a budget-friendly laptop for school or a premium device for work, you'll always find value here.</p>
             </div>
             <div className='content_image'>
-              <img src='/images/team-with-laptop.jpg
-          ' alt='laptop with shopping cart'></img>
+              <img className='to_saturate' src='/images/laptop-shopping-trolley.jpg' alt='laptop with shopping cart'></img>
             </div>
           </div>
         </div>
