@@ -4,7 +4,7 @@ import './nav.css';
 
 const Wholesale = () => {
     const [formData, setFormData] = useState({
-        firstName: '',
+        fullName: '',
         jobTitle: '',
         email: '',
         phoneNumber: '',
@@ -68,11 +68,11 @@ const Wholesale = () => {
                         <form onSubmit={handleSubmit}>
                             <input
                                 type='text'
-                                name='firstName'
-                                value={formData.firstName}
+                                name='fullName'
+                                value={formData.fullName}
                                 onChange={handleChange}
-                                placeholder='First Name'
-                                aria-label='First Name'
+                                placeholder='Full Name *'
+                                aria-label='Full Name'
                                 required
                             />
                             <input
@@ -89,7 +89,7 @@ const Wholesale = () => {
                                 name='email'
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder='Email'
+                                placeholder='Email *'
                                 aria-label='Email'
                                 required
                             />
@@ -107,14 +107,12 @@ const Wholesale = () => {
                                 value={formData.businessDescription}
                                 onChange={handleChange}
                                 placeholder={`Describe your business, including how many years you've been in operation.
-                                
 List the top brands you currently sell.
-                                
 Approximate opening order (in total units).`}
                                 aria-label='Business Description'
                                 rows='6'
                             ></textarea>
-                            <button type='submit'>SUBMIT MY REQUEST</button>
+                            <button type='submit' className='partner_btn'>SUBMIT MY REQUEST</button>
                         </form>
                     </div>
                 </div>

@@ -80,6 +80,7 @@
     font-size: 54px;
     font-weight: 900;
     color: rgb(248, 105, 105);
+    color: var(--primary-accent);
 }
 
 .container_top_text p {
@@ -170,4 +171,61 @@
     font-weight: 900;
     text-transform: capitalize;
     letter-spacing: -2px;
+}
+
+.partner_form {
+    margin: auto;
+    width: 80%;
+}
+
+.partner_form p {
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: capitalize;
+    letter-spacing: -2px;
+    padding: 10px;
+}
+
+.partner_form input {
+    width: 45%;
+    height: 45px;
+    margin: 5px 10px;
+    border: 1px solid var(--button-hover);
+    border-radius: 10px;
+    padding: 4px 15px;
+    background: var(--footer-bg-color);
+    color: var(--light-text-color);
+
+}
+
+.partner_form input::placeholder {
+    color: rgb(185, 174, 174);
+}
+
+.partner_form textarea {
+    width: 91.5%;
+    border-radius: 10px;
+    padding: 15px 15px;
+    background: var(--footer-bg-color);
+    border: 1px solid var(--button-hover);
+    margin: 5px 10px;
+}
+
+.partner_form button {
+    padding: 15px 12rem;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid var(--button-color);
+    background-color: var(--button-color);
+    color: var(--light-text-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.partner_form button:hover {
+    background-color: var(--button-hover);
 }
