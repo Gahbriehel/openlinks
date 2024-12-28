@@ -38,6 +38,7 @@ const productSchema = mongoose.Schema({
         required: true,
         min: 0,
     },
+    // TODO: Implementation later
     // rating: Number,
     // isFeatured: Boolean,
     dateCreated: {

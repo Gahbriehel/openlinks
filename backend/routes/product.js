@@ -3,6 +3,7 @@
 const { Product } = require('../models/product');
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose')
 
 router.get(`/`, async (req, res) => {
     const products = await Product.find();
@@ -25,6 +26,9 @@ router.get('/:id', async (req, res) => {
 })
 
 router.put('/:id', async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id)) {
+        return res.status(404).json({ success: false, message: "Invalid product id" });
+    }
     const product = await Product.findByIdAndUpdate(
         req.params.id,
         { ...req.body },
@@ -39,12 +43,15 @@ router.put('/:id', async (req, res) => {
 })
 
 router.delete('/:id', async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id)) {
+        return res.status(404).json({ success: false, message: "Invalid product id" });
+    }
     const product = await Product.findByIdAndDelete(req.params.id);
 
     if (!product) {
-        return res.status(404).json({ success: false, message: "category not found" });
+        return res.status(404).json({ success: false, message: "product not found" });
     }
-    return res.status(200).json({ success: true, messag: "category has been deleted" })
+    return res.status(200).json({ success: true, messag: "product has been deleted" })
 })
 
 router.post(`/`, async (req, res) => {
@@ -71,5 +78,16 @@ router.post(`/`, async (req, res) => {
     }
     return res.status(201).json({ success: "ok", status: 200, product })
 })
+
+router.get('/get/count', async (req, res) => {
+    const productCount = await Product.countDocuments();
+
+    if (!productCount) {
+        res.status(500).json({ success: false, message: "product cannot be counted" })
+    }
+
+    res.json({ success: "ok", statusCode: 200, productCount })
+})
+
 
 module.exports = router;
