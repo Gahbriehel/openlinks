@@ -13,8 +13,16 @@ router.get(`/`, async (req, res) => {
     res.json({ success: "ok", statusCode: 200, users })
 })
 
-router.post(`/`, (req, res) => {
-    res.send()
-})
+router.post(`/`, async (req, res) => {
+    let user = new User({
+        ...req.body
+    });
 
+    user = await user.save();
+
+    if (!user) {
+        return res.status(404).send("user couldn't be created")
+    }
+    res.send({ success: "ok", status: 201, user })
+});
 module.exports = router;
