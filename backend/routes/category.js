@@ -5,14 +5,23 @@ const router = express.Router();
 
 
 router.get(`/`, async (req, res) => {
-    const category = await Category.find();
+    const categories = await Category.find();
 
-    if (!category) {
+    if (!categories) {
         res.status(500).json({ success: false })
     }
 
-    res.json({ success: "ok", statusCode: 200, category })
+    res.json({ success: "ok", statusCode: 200, categories })
 })
+
+router.get('/:id', async (req, res) => {
+    const category = await Category.findById(req.params.id);
+
+    if (!category) {
+        res.status(500).json({ success: false, message: "The category was not found" })
+    }
+    res.status(200).send(category);
+});
 
 router.post(`/`, async (req, res) => {
     let category = new Category({
@@ -26,9 +35,22 @@ router.post(`/`, async (req, res) => {
         return res.status(404).send("category couldn't be created")
     }
     res.send({ success: "ok", status: 201, category })
+});
+
+router.put('/:id', async (req, res) => {
+    const category = await Category.findByIdAndUpdate(
+        req.params.id,
+        { ...req.body },
+        { new: true }
+    )
+
+    if (!category) {
+        return res.status(404).send("category couldn't be updated")
+    }
+    res.send({ success: "ok", status: 201, category })
+
 })
 
-// /api/vi/{id}
 router.delete('/:id', (req, res) => {
     // Having issues deleting from Mongo Atlas
     Category.findByIdAndDelete(req.params.id)
@@ -42,6 +64,6 @@ router.delete('/:id', (req, res) => {
         .catch(err => {
             return res.status(400).json({ success: false, error: err });
         });
-})
+});
 
 module.exports = router;
