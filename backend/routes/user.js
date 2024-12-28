@@ -83,4 +83,26 @@ router.post('/register', async (req, res) => {
 })
 
 
+router.get('/get/count', async (req, res) => {
+    const userCount = await User.countDocuments();
+
+    if (!userCount) {
+        res.status(500).json({ success: false, message: "user cannot be counted" })
+    }
+
+    res.json({ success: "ok", statusCode: 200, userCount })
+})
+
+router.delete('/:id', async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id)) {
+        return res.status(404).json({ success: false, message: "Invalid user id" });
+    }
+    const user = await User.findByIdAndDelete(req.params.id);
+
+    if (!user) {
+        return res.status(404).json({ success: false, message: "user not found" });
+    }
+    return res.status(200).json({ success: true, messag: "user has been deleted" })
+})
+
 module.exports = router;
