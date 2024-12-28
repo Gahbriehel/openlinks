@@ -11,13 +11,19 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv/config');
 
+const jwt = require('./helpers/jwt');
+
+const errorHandler = require('./helpers/error-handler')
+
 app.use(cors());
 app.options('*', cors());
 
 
 // middleware
 app.use(bodyParser.json()); // req parser middleware
-app.use(morgan('tiny')); // logger middleware
+app.use(morgan('tiny'));
+app.use(jwt()); // logger middleware
+app.use(errorHandler)
 
 
 
@@ -38,7 +44,7 @@ app.use(`${api}/orders`, orderRouter);
 app.use(`${api}/category`, categoryRouter);
 
 
-const Product = require("./models/product")
+const Product = require("./models/product");
 
 
 mongoose.connect(process.env.CONNECTION_STRING,
