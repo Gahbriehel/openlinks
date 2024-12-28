@@ -10,13 +10,26 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    street: String,
-    apartment: String,
-    city: String,
-    zip: String,
-    country: String,
-    phone: Number,
-    isAdmin: Boolean,
+    street: {
+        type: String,
+    },
+    apartment: {
+        type: String,
+    },
+    city: {
+        type: String,
+    },
+    zip: {
+        type: String,
+    },
+    country: {
+        type: String,
+        required: true
+    },
+    phone: {
+        type: String,
+        required: true
+    }
 })
 
 exports.User = mongoose.model('User', userSchema);
