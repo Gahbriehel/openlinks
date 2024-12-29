@@ -56,7 +56,7 @@ router.delete('/:id', (req, res) => {
     Category.findByIdAndDelete(req.params.id)
         .then(category => {
             if (category) {
-                return res.status(200).json({ success: true, messag: "category has been deleted" })
+                return res.status(200).json({ success: true, message: "category has been deleted" })
             } else {
                 return res.status(404).json({ success: false, message: "category not found" });
             }
