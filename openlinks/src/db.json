@@ -1,16 +1,204 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100, "image": "images/acer-logo.png" },
-      { "id": "2", "title": "another title", "views": 200, "image": "images/apple-logo.png" },
-      { "id": "3", "title": "My title", "views": 500, "image": "images/dell-logo.png" }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" },
-      { "id": "3", "text": "My comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
-    }
-  }
-  
+  "laptops": [
+      {
+          "id": 1,
+          "name": "Apple Gaming Laptop 931",
+          "description": "Designed for high-performance tasks with top-notch specs.",
+          "longDescription": "This Apple Gaming laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Apple",
+          "price": 558.27,
+          "category": "Gaming",
+          "stock": 20
+      },
+      {
+          "id": 2,
+          "name": "HP Gaming Laptop 927",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This HP Gaming laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "HP",
+          "price": 2431.34,
+          "category": "Gaming",
+          "stock": 67
+      },
+      {
+          "id": 3,
+          "name": "Acer Ultrabook Laptop 149",
+          "description": "A professional-grade laptop for productivity and multitasking.",
+          "longDescription": "This Acer Ultrabook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Acer",
+          "price": 2618.08,
+          "category": "Ultrabook",
+          "stock": 57
+      },
+      {
+          "id": 4,
+          "name": "HP Business Laptop 908",
+          "description": "Designed for high-performance tasks with top-notch specs.",
+          "longDescription": "This HP Business laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "HP",
+          "price": 658.04,
+          "category": "Business",
+          "stock": 54
+      },
+      {
+          "id": 5,
+          "name": "Lenovo Chromebook Laptop 213",
+          "description": "Designed for high-performance tasks with top-notch specs.",
+          "longDescription": "This Lenovo Chromebook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Lenovo",
+          "price": 1776.99,
+          "category": "Chromebook",
+          "stock": 81
+      },
+      {
+          "id": 6,
+          "name": "Dell Business Laptop 998",
+          "description": "A professional-grade laptop for productivity and multitasking.",
+          "longDescription": "This Dell Business laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Dell",
+          "price": 778.41,
+          "category": "Business",
+          "stock": 94
+      },
+      {
+          "id": 7,
+          "name": "Dell Chromebook Laptop 873",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This Dell Chromebook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Dell",
+          "price": 603.06,
+          "category": "Chromebook",
+          "stock": 5
+      },
+      {
+          "id": 8,
+          "name": "Acer Business Laptop 673",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This Acer Business laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Acer",
+          "price": 2948.38,
+          "category": "Business",
+          "stock": 93
+      },
+      {
+          "id": 9,
+          "name": "Microsoft 2-in-1 Laptop 144",
+          "description": "Perfect for gaming enthusiasts and content creators.",
+          "longDescription": "This Microsoft 2-in-1 laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Microsoft",
+          "price": 593.96,
+          "category": "2-in-1",
+          "stock": 81
+      },
+      {
+          "id": 10,
+          "name": "MSI Chromebook Laptop 193",
+          "description": "Perfect for gaming enthusiasts and content creators.",
+          "longDescription": "This MSI Chromebook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "MSI",
+          "price": 2253.76,
+          "category": "Chromebook",
+          "stock": 42
+      },
+      {
+          "id": 11,
+          "name": "HP 2-in-1 Laptop 539",
+          "description": "Designed for high-performance tasks with top-notch specs.",
+          "longDescription": "This HP 2-in-1 laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "HP",
+          "price": 2546.52,
+          "category": "2-in-1",
+          "stock": 26
+      },
+      {
+          "id": 12,
+          "name": "HP Chromebook Laptop 432",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This HP Chromebook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "HP",
+          "price": 1436.82,
+          "category": "Chromebook",
+          "stock": 19
+      },
+      {
+          "id": 13,
+          "name": "Lenovo Chromebook Laptop 739",
+          "description": "Perfect for gaming enthusiasts and content creators.",
+          "longDescription": "This Lenovo Chromebook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Lenovo",
+          "price": 1755.94,
+          "category": "Chromebook",
+          "stock": 2
+      },
+      {
+          "id": 14,
+          "name": "Acer Business Laptop 463",
+          "description": "Lightweight and portable with a long battery life.",
+          "longDescription": "This Acer Business laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Acer",
+          "price": 2599.7,
+          "category": "Business",
+          "stock": 43
+      },
+      {
+          "id": 15,
+          "name": "Acer Workstation Laptop 256",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This Acer Workstation laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Acer",
+          "price": 515.51,
+          "category": "Workstation",
+          "stock": 20
+      },
+      {
+          "id": 16,
+          "name": "HP 2-in-1 Laptop 409",
+          "description": "Lightweight and portable with a long battery life.",
+          "longDescription": "This HP 2-in-1 laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "HP",
+          "price": 1261.61,
+          "category": "2-in-1",
+          "stock": 14
+      },
+      {
+          "id": 17,
+          "name": "Acer Workstation Laptop 111",
+          "description": "Lightweight and portable with a long battery life.",
+          "longDescription": "This Acer Workstation laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Acer",
+          "price": 515.99,
+          "category": "Workstation",
+          "stock": 66
+      },
+      {
+          "id": 18,
+          "name": "MSI Ultrabook Laptop 832",
+          "description": "Lightweight and portable with a long battery life.",
+          "longDescription": "This MSI Ultrabook laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "MSI",
+          "price": 1762.97,
+          "category": "Ultrabook",
+          "stock": 39
+      },
+      {
+          "id": 19,
+          "name": "Razer Business Laptop 881",
+          "description": "A sleek and powerful laptop for everyday use.",
+          "longDescription": "This Razer Business laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Razer",
+          "price": 2330.5,
+          "category": "Business",
+          "stock": 45
+      },
+      {
+          "id": 20,
+          "name": "Dell Gaming Laptop 563",
+          "description": "A professional-grade laptop for productivity and multitasking.",
+          "longDescription": "This Dell Gaming laptop features top-of-the-line components for exceptional performance. With its cutting-edge design, it's perfect for both work and play. It includes advanced features like high-resolution displays, powerful processors, and ample storage capacity, ensuring a seamless user experience.",
+          "brand": "Dell",
+          "price": 1775.93,
+          "category": "Gaming",
+          "stock": 46
+      }
+  ]
+}
