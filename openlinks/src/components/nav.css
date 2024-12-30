@@ -37,7 +37,13 @@
 
 .nav_container {
     width: 100%;
-    background: var(--nav-bg-color)
+    background: var(--nav-bg-color);
+    padding: 0 10px;
+    /* position: fixed;  */
+    /* z-index: 1000;  */
+    /* top: 0; */
+    /* left: 0; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 
 .nav_container .nav_top {
@@ -56,10 +62,15 @@
     /* margin-top: -50px; */
 }
 
+.search_box {
+    display: flex;
+    align-items: center;
+}
+
 .search_box input {
-    width: 15rem;
-    padding: 10px 4px;
-    border-radius: 3rem;
+    width: 30rem;
+    padding: 10px 10px;
+    border-radius: 10px;
     margin-right: 10px;
     background: var(--input-field-bg)
 
@@ -79,14 +90,53 @@
 .cart_btn button {
     padding: 10px 20px;
     margin-right: 20px;
-    border-radius: 20px;
+    border: none;
+    background-color: var(--nav-bg-color);
     cursor: pointer;
     transition: 0.5s;
+    /* color: var(--primary-accent); */
+    color: var(--light-text);
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.cart_btn button .cart_icon {
+    font-size: 23px;
+    margin-right: 5px;
 }
 
 .cart_btn button:hover {
-    background: var(--button-hover);
+    background: var(--nav-bg-color);
+    color: var(--primary-accent);
+}
+
+.nav_top_right {
+    display: flex;
+    align-items: center;
+}
+
+.account button {
+    padding: 10px 20px;
+    /* margin-right: 20px; */
+    font-size: 20px;
+    border: none;
+    background-color: var(--nav-bg-color);
+    cursor: pointer;
+    transition: 0.5s;
     color: var(--light-text);
+    display: flex;
+    align-items: center;
+}
+
+.account button:hover {
+    background: var(--nav-bg-color);
+    color: var(--primary-accent);
+}
+
+.account_icon {
+    font-size: 28px;
+    margin-right: 5px;
 }
 
 .nav_bottom ul {
