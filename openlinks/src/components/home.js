@@ -1,11 +1,128 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import './home.css';
+import '../db.json'
+import { IoIosArrowUp } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import { FaStar, FaLaptop } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
+
+
 
 const Home = () => {
+    const [laptops, setLaptops] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const laptopsResponse = await fetch("http://localhost:3004/laptops");
+
+                const laptopsData = await laptopsResponse.json()
+                console.log(laptopsData)
+
+                setLaptops(laptopsData)
+            }
+            catch (error) {
+                console.error("Error fetching data", error)
+            }
+        }
+        fetchData()
+    }, [])
     return (
         <>
             <div className='home_container'>
-                <h1>This is the home page</h1>
-                <h2>Fill sections and sections</h2>
+                <div className='heading'>
+                    <h1>Laptop for Tech Enthusiasts</h1>
+                    <div className='heading_btns'>
+                        <button>Performance</button>
+                        <button>Design</button>
+                        <button>Battery Life</button>
+                        <button>Portability</button>
+                        <button>Gaming</button>
+                    </div>
+                </div>
+                <div className='main'>
+                    <div className='left_side'>
+                        <div className='sort_by'>
+                            <div className='sort_by_text'>
+                                <p>Sort by</p>
+                                <IoIosArrowUp />
+                            </div>
+                            <div className='sort_by_form'>
+                                <form>
+                                    <input type='checkbox' id='dell' name='dell' value='dell'></input>
+                                    <label htmlFor='dell'>Dell</label><br />
+                                    <input type='checkbox' id='hp' name='hp' value='hp'></input>
+                                    <label htmlFor='hp'>HP</label><br />
+                                    <input type='checkbox' id='lenovo' name='lenovo' value='lenovo'></input>
+                                    <label htmlFor='lenovo'>Lenovo</label><br />
+                                </form>
+                            </div>
+
+                        </div>
+                        <div className='filter_by'>
+                            <div className='filter_by_text'>
+                                <p>Filter by</p>
+                                <IoIosArrowUp />
+                            </div>
+                            <div className='filter_by_form'>
+                                <form>
+                                    <input type='checkbox' id='brand' name='brand' value='brand'></input>
+                                    <label htmlFor='brand'>Brand</label><br />
+                                    <input type='checkbox' id='sale' name='sale' value='sale'></input>
+                                    <label htmlFor='sale'>Sale</label><br />
+                                    <input type='checkbox' id='preorder' name='preorder' value='preorder'></input>
+                                    <label htmlFor='preorder'>Pre order</label><br />
+                                    <input type='checkbox' id='stock' name='stock' value='stock'></input>
+                                    <label htmlFor='stock'>In Stock</label><br />
+                                </form>
+                            </div>
+
+                        </div>
+                        <div className='_by'>
+                            <p>3rd</p>
+                        </div>
+                    </div>
+                    <div className='home_body'>
+
+                        <div className='home_body_top'>
+                            <div className='home_body_top_left'>
+                                <ul>
+                                    <li><Link className='link' to=''><FaStar /></Link></li>
+                                    <li><Link className='link' to=''>Bestsellers</Link></li>
+                                    <li><Link className='link' to=''>New Arrivals</Link></li>
+                                    <li><Link className='link' to=''>Laptops</Link></li>
+                                </ul>
+                            </div>
+                            <div className='home_body_top_right'>
+                                <ul>
+                                    <li><Link className='link icon' to=''><FaLaptop /></Link></li>
+                                    <li><Link className='link icon' to=''><RxHamburgerMenu /></Link></li>
+                                    <li><button>Sort by: Recommended</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className='products'>
+                            <div className='container'>
+                                {
+                                    laptops.map((laptop) => {
+                                        return (
+                                            <>
+                                            <div className='card'>
+                                                <div className='card_img'>
+                                                    <img src={laptop.image} alt='laptop'/>
+                                                </div>
+                                            </div>
+                                            </>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </>
     )
