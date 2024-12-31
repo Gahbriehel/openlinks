@@ -8,6 +8,7 @@
           "brand": "Apple",
           "price": 558.27,
           "category": "Gaming",
+          "image": "/images/laptop1.jpeg",
           "stock": 20
       },
       {
@@ -18,6 +19,7 @@
           "brand": "HP",
           "price": 2431.34,
           "category": "Gaming",
+          "image": "/images/laptop2.jpeg",
           "stock": 67
       },
       {
@@ -28,6 +30,7 @@
           "brand": "Acer",
           "price": 2618.08,
           "category": "Ultrabook",
+          "image": "/images/laptop3.jpeg",
           "stock": 57
       },
       {
@@ -38,6 +41,7 @@
           "brand": "HP",
           "price": 658.04,
           "category": "Business",
+          "image": "/images/laptop4.jpeg",
           "stock": 54
       },
       {
@@ -48,6 +52,7 @@
           "brand": "Lenovo",
           "price": 1776.99,
           "category": "Chromebook",
+          "image": "/images/laptop5.jpeg",
           "stock": 81
       },
       {
@@ -58,6 +63,7 @@
           "brand": "Dell",
           "price": 778.41,
           "category": "Business",
+          "image": "/images/laptop6.jpeg",
           "stock": 94
       },
       {
@@ -68,6 +74,7 @@
           "brand": "Dell",
           "price": 603.06,
           "category": "Chromebook",
+          "image": "/images/laptop7.jpeg",
           "stock": 5
       },
       {
@@ -78,6 +85,7 @@
           "brand": "Acer",
           "price": 2948.38,
           "category": "Business",
+          "image": "/images/laptop8.jpeg",
           "stock": 93
       },
       {
@@ -88,6 +96,7 @@
           "brand": "Microsoft",
           "price": 593.96,
           "category": "2-in-1",
+          "image": "/images/laptop9.jpeg",
           "stock": 81
       },
       {
@@ -98,6 +107,7 @@
           "brand": "MSI",
           "price": 2253.76,
           "category": "Chromebook",
+          "image": "/images/laptop10.jpeg",
           "stock": 42
       },
       {
@@ -108,6 +118,7 @@
           "brand": "HP",
           "price": 2546.52,
           "category": "2-in-1",
+          "image": "/images/laptop11.jpeg",
           "stock": 26
       },
       {
@@ -118,6 +129,7 @@
           "brand": "HP",
           "price": 1436.82,
           "category": "Chromebook",
+          "image": "/images/laptop12.jpeg",
           "stock": 19
       },
       {
@@ -128,6 +140,7 @@
           "brand": "Lenovo",
           "price": 1755.94,
           "category": "Chromebook",
+          "image": "/images/laptop13.jpeg",
           "stock": 2
       },
       {
@@ -138,6 +151,7 @@
           "brand": "Acer",
           "price": 2599.7,
           "category": "Business",
+          "image": "/images/laptop14.jpeg",
           "stock": 43
       },
       {
@@ -148,6 +162,7 @@
           "brand": "Acer",
           "price": 515.51,
           "category": "Workstation",
+          "image": "/images/laptop15.jpeg",
           "stock": 20
       },
       {
@@ -158,6 +173,7 @@
           "brand": "HP",
           "price": 1261.61,
           "category": "2-in-1",
+          "image": "/images/laptop16.jpeg",
           "stock": 14
       },
       {
@@ -168,6 +184,7 @@
           "brand": "Acer",
           "price": 515.99,
           "category": "Workstation",
+          "image": "/images/laptop17.jpeg",
           "stock": 66
       },
       {
@@ -178,6 +195,7 @@
           "brand": "MSI",
           "price": 1762.97,
           "category": "Ultrabook",
+          "image": "/images/laptop18.jpeg",
           "stock": 39
       },
       {
@@ -188,6 +206,7 @@
           "brand": "Razer",
           "price": 2330.5,
           "category": "Business",
+          "image": "/images/laptop19.jpeg",
           "stock": 45
       },
       {
@@ -198,6 +217,7 @@
           "brand": "Dell",
           "price": 1775.93,
           "category": "Gaming",
+          "image": "/images/laptop20.jpeg",
           "stock": 46
       }
   ]
