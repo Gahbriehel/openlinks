@@ -42,7 +42,7 @@ const About = () => {
               <p>Browse our curated collections to find the best devices for productivity, entertainment, and more.</p>
             </div>
             <div className='content_image'>
-              <img src='/images/brand_image0.jpg' alt='laptops'></img>
+              <img src='/images/big-on-variety-image.jpeg' alt='laptops'></img>
             </div>
           </div>
           <div className='content'>
