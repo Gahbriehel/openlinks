@@ -113,6 +113,14 @@ const Home = () => {
                                                 <div className='card_img'>
                                                     <img src={laptop.image} alt='laptop'/>
                                                 </div>
+                                                <div className='card_info'>
+                                                    <h3>{laptop.name}</h3>
+                                                    <p>{laptop.brand}</p>
+                                                    {/* <p>{laptop.price}</p> */}
+                                                </div>
+                                                <div className='card_actions'>
+                                                    <p>${laptop.price}</p>
+                                                </div>
                                             </div>
                                             </>
                                         )
