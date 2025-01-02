@@ -7,6 +7,8 @@
     /* Backgrounds */
     --main-bg-color: #f5f9f5;
     --nav-bg-color: #204729;
+    --nav-bg-color-light: #275833;
+    --nav-bg-color-dark: #1d3f25;
     --footer-bg-color: #1b3923;
     --input-field-bg: #eaf5e9;
 
@@ -31,8 +33,9 @@
 
 .home_container {
     width: 100%;
-    /* background: var(--nav-bg-color); */
+    background: var(--nav-bg-color);
     padding: 0;
+    color: var(--light-text);
 }
 
 .heading {
@@ -42,7 +45,7 @@
 .heading .heading_btns button {
     padding: 7px 12px;
     color: var(--light-text);
-    background-color: black;
+    background-color: var(--button-hover);
     margin: 5px 10px;
     border-radius: 15px;
 }
@@ -129,7 +132,7 @@
 .home_body .home_body_top_left ul li  {
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: var(--light-text);
     padding-right: 40px;
     margin-right: 40px;
     /* display: none; */
@@ -142,7 +145,7 @@
 .home_body .home_body_top_right ul li  {
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: var(--light-text);
     padding-left: 20px;
     margin-left: 20px;
 }
@@ -150,13 +153,13 @@
 
 .link {
     text-decoration: none;
-    color: var(--primary-text-color);
+    color: var(--light-text);
     transition: 0.5s;
 }
 
 .icon {
     font-size: 20px;
-    color: #1b3923;
+    color: var(--light-text);
 }
 
 .link:hover .home_body .home_body_top  {
@@ -177,13 +180,13 @@
 }
 
 .card {
-    width: 250px;
-    height: 320px ;
+    width: 280px;
+    height: 340px ;
     /* padding: 10px 10px; */
     /* border: 4px solid #f6f7f8; */
     margin-top: 20px;
     margin-left: 30px;
-    background: #f6f7f8;
+    background: var(--nav-bg-color-light);
     overflow: hidden;
     border-radius: 20px;
 }
@@ -197,10 +200,31 @@
 }
 
 .card .card_info  {
-    font-size: 15px;
+    font-size: 14px;
     margin-left: 5px;
 }
 
 .card .card_info {
     margin-bottom: 20px;
+}
+
+.card .card_actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+.card .card_actions button {
+    padding: 5px 10px;
+    border: none;
+    background: var(--button-color);
+    color: var(--light-text);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card .card_actions button:hover {
+    background: var(--button-hover);
 }
