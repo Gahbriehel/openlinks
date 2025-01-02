@@ -58,7 +58,7 @@
 }
 
 .main .left_side {
-    width: 15%;
+    width: 22%;
     border-right: 2px solid red;
 }
 
@@ -83,6 +83,10 @@
 
 .main .left_side .sort_by .sort_by_form label {
     margin-left: 5px;
+}
+
+.main .left_side .sort_by .sort_by_form input[type="checkbox"] {
+    color: #1b3923;
 }
 
 
@@ -111,7 +115,6 @@
 }
 
 .home_body .home_body_top {
-    border-bottom: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -126,6 +129,8 @@
 
 .home_body .home_body_top_left ul {
     display: flex;
+    border-bottom: 1px solid red;
+
     /* justify-content: space-around; */
 }
 
@@ -133,23 +138,37 @@
     list-style: none;
     text-decoration: none;
     color: var(--light-text);
-    padding-right: 40px;
-    margin-right: 40px;
+    /* padding-right: 40px; */
+    margin-right: 160px;
     /* display: none; */
+}
+
+.home_body .home_body_top_left ul li:hover {
+    border-bottom: 1px solid red;
+
 }
 
 .home_body .home_body_top_right ul {
     display: flex;
+    border-bottom: 1px solid red;
 }
 
 .home_body .home_body_top_right ul li  {
     list-style: none;
     text-decoration: none;
     color: var(--light-text);
-    padding-left: 20px;
-    margin-left: 20px;
+    /* padding-left: 20px; */
+    margin-left: 65px;
 }
 
+.home_body .home_body_top_right ul li button {
+    padding: 5px 10px;
+    border: none;
+    background: var(--button-color);
+    color: var(--light-text);
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 .link {
     text-decoration: none;
@@ -206,6 +225,12 @@
 
 .card .card_info {
     margin-bottom: 20px;
+}
+
+.card .card_info .price_p {
+    font-size: 18px;
+    font-weight: 600;
+    /* margin-left: 5px; */
 }
 
 .card .card_actions {
