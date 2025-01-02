@@ -47,7 +47,7 @@ const About = () => {
           </div>
           <div className='content'>
             <div className='content_image'>
-              <img className='to_saturate' src='/images/brand_image1.jpg' alt='laptop'></img>
+              <img src='/images/bigger.jpeg' alt='laptop'></img>
             </div>
             <div className='content_text'>
               <h2>Bigger On Quality</h2>
@@ -87,7 +87,7 @@ const About = () => {
               <p>By partnering directly with manufacturers and utilizing efficient supply chain practices, we pass the savings directly to you. Whether it's a budget-friendly laptop for school or a premium device for work, you'll always find value here.</p>
             </div>
             <div className='content_image'>
-              <img className='to_saturate' src='/images/laptop-shopping-trolley.jpg' alt='laptop with shopping cart'></img>
+              <img className='to_saturate' src='/images/value-image.jpeg' alt='laptop with shopping cart'></img>
             </div>
           </div>
         </div>
