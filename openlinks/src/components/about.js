@@ -11,9 +11,15 @@ const About = () => {
   return (
     <div className='about_container'>
       <div className='about_section1'>
-        <h1>OUR STORY</h1>
-        <img src='images/laptop3.jpg' alt='laptop3'></img>
+        <div className='about_section1_right'>
+          <h1>OUR STORY</h1>
+        </div>
+        <div className='about_section1_left'>
+          <img src='images/story-image.jpeg' alt='about' />
+        </div>
+        <hr />
       </div>
+      
       <div className='about_section2'>
         <h1>technology is our mission</h1>
         <p>We're a modern platform dedicated to transforming how people discover, compare, and purchase laptops.</p>
