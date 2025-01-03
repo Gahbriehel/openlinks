@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
 
-import { cartAction } from './redux/cart/cartSlice';
+import { addToCart } from './redux/cart/cartSlice';
 
 export const ProductListing = () => {
 
@@ -11,6 +11,7 @@ export const ProductListing = () => {
 
     useEffect(() => {
         dispatch(fetchProduct())
+
     }, [])
 
     const laptops = productData.products
@@ -45,7 +46,7 @@ export const ProductListing = () => {
                             <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
                         </div>
                         <div className='card_actions'>
-                            <button onClick={() => dispatch()}>Add To Cart</button>
+                            <button onClick={() => dispatch(addToCart(laptop))}>Add To Cart</button>
                             <button>Buy Now</button>
                         </div>
                     </div>

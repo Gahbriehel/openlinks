@@ -15,7 +15,7 @@ const cartSlice = createSlice({
             const duplicate = state.products.find((product => product.id === action.payload.id))
             if (!duplicate) {
                 state.products.push(action.payload)
-                state.number = state.products.length + 1;
+                state.number = state.products.length;
             }
         },
         removeFromCart: (state, action) => {
@@ -26,4 +26,4 @@ const cartSlice = createSlice({
 })
 
 export default cartSlice.reducer;
-export const { cartAction } = cartSlice.actions;
+export const { addToCart, removeFromCart } = cartSlice.actions;
