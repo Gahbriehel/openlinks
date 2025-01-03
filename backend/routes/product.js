@@ -1,5 +1,4 @@
 // express and api router for open_link
-// const { Category } = require('../models/category');
 const { Product } = require('../models/product');
 const express = require('express');
 const router = express.Router();
@@ -8,10 +7,10 @@ const mongoose = require('mongoose')
 
 router.get(`/`, async (req, res) => {
     let filter = {}
-    if (req.query.category) {
-        filter = { category: req.query.category.split(",") }
+    if (req.query.brand) {
+        filter = { brand: req.query.brand.split(",") }
     }
-    const products = await Product.find(filter).populate('category');
+    const products = await Product.find(filter).populate('brand');
 
     if (!products) {
         res.status(500).json({ success: false })
@@ -21,7 +20,7 @@ router.get(`/`, async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-    const product = await Product.findById(req.params.id).populate('category');
+    const product = await Product.findById(req.params.id).populate('brand');
 
     if (!product) {
         res.status(500).json({ success: false, message: "product cannot be found" })
@@ -60,9 +59,9 @@ router.delete('/:id', async (req, res) => {
 })
 
 router.post(`/`, async (req, res) => {
-    const category = await Category.findById(req.body.category);
-    if (!category) {
-        return res.status(400).json({ success: false, message: "Invalid Category" })
+    const brand = await Brand.findById(req.body.brand);
+    if (!brand) {
+        return res.status(400).json({ success: false, message: "Invalid Brand" })
     }
     let product = new Product({
         name: req.body.name,
@@ -70,9 +69,8 @@ router.post(`/`, async (req, res) => {
         longDescription: req.body.longDescription,
         image: req.body.image,
         images: req.body.images,
-        brand: req.body.brand,
         price: req.body.price,
-        category: req.body.category,
+        brand: req.body.brand,
         stock: req.body.stock,
         dateCreated: req.body.dateCreated
     })
