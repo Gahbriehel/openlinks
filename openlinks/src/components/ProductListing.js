@@ -11,7 +11,7 @@ export const ProductListing = () => {
 
     useEffect(() => {
         dispatch(fetchProduct())
-
+        // 
     }, [])
 
     const laptops = productData.products
