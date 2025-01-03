@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './wholesale.css';
 import './nav.css';
+import { Link } from 'react-router-dom';
 
 const Wholesale = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +40,7 @@ const Wholesale = () => {
                         <p>
                             If you'd like to bring our extensive range of laptops, accessories, and tech solutions to your customers, we'd love to hear from you. Due to high demand, we process applications on a first-come, first-served basis—thank you for your patience as we respond to your request.
                         </p>
-                        <button>CONTACT US</button>
+                        <Link to='/contact'><button>CONTACT US</button></Link>
                     </div>
                 </div>
                 <div className='wholesale_container_mid'>
@@ -56,6 +57,8 @@ const Wholesale = () => {
                         <div className='brand_logo'><img src='/images/hp-logo1.png' alt='HP logo'></img></div>
                         <div className='brand_logo'><img src='/images/acer-logo.png' alt='Acer logo'></img></div>
                         <div className='brand_logo'><img src='/images/sony-logo.png' alt='Sony logo'></img></div>
+                        <div className='brand_logo'><img src='/images/asus-logo.png' alt='Asus logo'></img></div>
+                        <div className='brand_logo'><img src='/images/chromebook-logo.png' alt='Chromebook logo'></img></div>
                     </div>
                 </div>
                 <div className='wholesale_container_bottom'>
