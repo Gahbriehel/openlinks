@@ -92,7 +92,6 @@ const Home = () => {
                         </div>
                         <div className='products'>
                             <div className='container'>
-
                                 <ProductListing /> {/* Lists all the products */}
                             </div>
                         </div>
