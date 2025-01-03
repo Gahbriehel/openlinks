@@ -39,10 +39,11 @@
     width: 100%;
     background: var(--nav-bg-color);
     padding: 0 10px;
-    /* position: fixed;  */
-    /* z-index: 1000;  */
-    /* top: 0; */
-    /* left: 0; */
+    position: fixed; 
+    z-index: 1000; 
+    margin-bottom: 80px;
+    top: 0;
+    left: 0;
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
 }
 
