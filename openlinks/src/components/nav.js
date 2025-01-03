@@ -29,7 +29,6 @@ const Nav = () => {
                         <div className='cart_btn'>
                             <button><MdOutlineShoppingCart className='cart_icon' /> Cart</button>
                         </div>
-
                     </div>
                 </div>
                 <hr></hr>

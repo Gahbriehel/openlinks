@@ -7,28 +7,15 @@ import { FaStar, FaLaptop } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 
+import { ProductListing } from './ProductListing';
+
+// import { useSelector, useDispatch } from 'react-redux';
+// import { fetchProduct } from './redux/product/productSlice';
 
 
 
 const Home = () => {
-    const [laptops, setLaptops] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const laptopsResponse = await fetch("http://localhost:3004/laptops");
-
-                const laptopsData = await laptopsResponse.json()
-                console.log(laptopsData)
-
-                setLaptops(laptopsData)
-            }
-            catch (error) {
-                console.error("Error fetching data", error)
-            }
-        }
-        fetchData()
-    }, [])
     return (
         <>
             <div className='home_container'>
@@ -105,28 +92,8 @@ const Home = () => {
                         </div>
                         <div className='products'>
                             <div className='container'>
-                                {
-                                    laptops.map((laptop) => {
-                                        return (
-                                            <>
-                                            <div className='card'>
-                                                <div className='card_img'>
-                                                    <img src={laptop.image} alt='laptop'/>
-                                                </div>
-                                                <div className='card_info'>
-                                                    <h3>{laptop.name}</h3>
-                                                    <p>{laptop.brand}</p>
-                                                    <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
-                                                </div>
-                                                <div className='card_actions'>
-                                                <button>Add To Cart</button>
-                                                    <button>Buy Now</button>
-                                                </div>
-                                            </div>
-                                            </>
-                                        )
-                                    })
-                                }
+
+                                <ProductListing /> {/* Lists all the products */}
                             </div>
                         </div>
 
@@ -137,4 +104,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;
