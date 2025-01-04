@@ -220,7 +220,7 @@
     margin-bottom: 20px;
 }
 
-.card .card_info .price_p {
+.card .card_actions .price_p {
     font-size: 18px;
     font-weight: 600;
     /* margin-left: 5px; */
