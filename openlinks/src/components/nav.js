@@ -33,7 +33,7 @@ const Nav = () => {
                             <button><MdPersonOutline className='account_icon' /> Sign In</button>
                         </div>
                         <div className='cart_btn'>
-                            <button><MdOutlineShoppingCart className='cart_icon' /> Cart{cartData.number > 0 && <span>({cartData.number})</span>}</button>
+                        <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart{cartData.number > 0 && <span>({cartData.number})</span>}</button></Link>
                         </div>
                     </div>
                 </div>

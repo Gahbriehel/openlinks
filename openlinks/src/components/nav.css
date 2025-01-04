@@ -117,6 +117,10 @@
     align-items: center;
 }
 
+.nav_top_right .cart_btn .cart_link {
+    text-decoration: none;
+}
+
 .account button {
     padding: 10px 20px;
     /* margin-right: 20px; */
