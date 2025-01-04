@@ -34,7 +34,7 @@
 .cart_container {
     width: 100%;
     background: var(--nav-bg-color);
-    padding: 0;
+    padding: 40px 60px;
     color: var(--light-text);
     margin-top: 220px;
     /* padding-bottom: 50px; */
@@ -51,12 +51,16 @@
 
 .cart_container .cart_main .shopping_cart {
     width: 60%;
-    padding: 20px 50px;
+    padding: 20px 0;
+}
+
+.cart_container .cart_main .shopping_cart h1 {
+    padding: 0 0 20px 0;
 }
 
 .cart_card {
     display: flex;
-    margin: 20px 0;
+    /* margin: 20px 0; */
     border-bottom: 1px solid var(--button-hover);
     padding: 20px 0;
     justify-content: space-between;
@@ -101,10 +105,15 @@
     padding: 5px 5px;
     width: 150px;
     cursor: pointer;
+    font-size: 16px;
     transition: 0.5s;
     background-color: var(--nav-bg-color);
     border: none;
     color: var(--light-text);
+}
+
+.cart_card .cart_card_actions button:hover {
+    color: var(--error-warning);
 }
 
 .cart_card .cart_card_actions button span {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './cart.css'
 import { fetchProduct } from './redux/product/productSlice';
 import { FaArrowLeft } from "react-icons/fa6";
@@ -11,16 +11,28 @@ import { removeFromCart } from './redux/cart/cartSlice';
 
 const Cart = () => {
 
+    const [quantities, setQuantities] = useState(1);
+
+    const handleQuantityChange = (id, value) => {
+        setQuantities(prevQuantities  => ({
+            ...prevQuantities,
+            [id]: value > 0 ? value : 1
+        }))
+    }
+
+    console.log("Quantities", quantities);
+    
+
     const productData = useSelector(state => state.cart)
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(fetchProduct())
         // 
-    }, [])
+    }, [dispatch])
 
 
-    const laptops = productData.products
+    const laptops = productData.products || []
     console.log("Now in cart")
     console.log(laptops);
     return (
@@ -36,6 +48,7 @@ const Cart = () => {
                     ) : (
                         <div className='cart_items'>
                             {laptops.map((laptop) => {
+                                const quantity = quantities[laptop.id] || 1;
                                 return (
                                     <div key={laptop.id}>
                                         <div className='cart_card'>
@@ -57,8 +70,14 @@ const Cart = () => {
                                             <div className='cart_card_actions'>
                                                 <button onClick={() => dispatch(removeFromCart(laptop))}>Remove item <span><FaTrashAlt /></span></button>
                                                 <div className='quantity'>
-                                                    <label htmlFor="quantity">Quantity</label>
-                                                    <input type="number" id="quantity" name="quantity" min="1"></input>
+                                                    <label htmlFor={`quantity-${laptop.id}`}>Quantity</label>
+                                                    <input
+                                                        type="number" 
+                                                        id={`quantity-${laptop.id}`} 
+                                                        value={quantity} 
+                                                        onChange={ (e) => handleQuantityChange(laptop.id, parseInt(e.target.value))} 
+                                                        name="quantity" 
+                                                        min="1"></input>
                                                 </div>
                                             </div>
                                         </div>
@@ -68,8 +87,31 @@ const Cart = () => {
                         </div>
                     )}
                 </div>
-                <div className='order'>
+                <div className='order_section'>
                     <h1>Order here</h1>
+                    <h1>My order</h1>
+                    <div className='order_items'>
+                        <table>
+                            <tr>
+                                <th>Product</th>
+                                {/* <th>Quantity</th> */}
+                                <th>Price</th>
+                            </tr>
+                            {laptops.map((laptop) => {
+                                const quantity = quantities[laptop.id] || 1;
+                                return (
+                                    <tr key={laptop.id}>
+                                        <td>{quantity} x {laptop.name}</td>
+                                        {/* <td>{quantity}</td> */}
+                                        <td>${new Intl.NumberFormat('en-us').format(laptop.price * quantity)}</td>
+                                    </tr>
+                                )
+                            })}
+                        </table>
+                        <input type='text' placeholder='Enter promo code'></input>
+                        
+                        <p>{}</p>
+                    </div>
                 </div>
             </div>
         </div>
