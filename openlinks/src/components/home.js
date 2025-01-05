@@ -92,6 +92,7 @@ const Home = () => {
                         </div>
                         <div className='products'>
                             <div className='container'>
+                                {/* What if I used state to manage when to show all product details vs. when to show only one that has been selected*/}
                                 <ProductListing /> {/* Lists all the products */}
                             </div>
                         </div>

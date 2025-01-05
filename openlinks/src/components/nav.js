@@ -13,7 +13,6 @@ import { useSelector } from 'react-redux';
 
 
 const Nav = () => {
-
     const cartData = useSelector(state => state.cart)
 
     console.log(cartData);
@@ -33,7 +32,7 @@ const Nav = () => {
                             <button><MdPersonOutline className='account_icon' /> Sign In</button>
                         </div>
                         <div className='cart_btn'>
-                        <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart{cartData.number > 0 && <span>({cartData.number})</span>}</button></Link>
+                            <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart{cartData.number > 0 && <span>({cartData.number})</span>}</button></Link>
                         </div>
                     </div>
                 </div>
