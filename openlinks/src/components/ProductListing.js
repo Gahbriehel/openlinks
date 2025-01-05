@@ -14,8 +14,7 @@ export const ProductListing = () => {
         // 
     }, [])
 
-    const laptops = productData.products
-    console.log(laptops)
+    const laptops = productData.products.products || []
 
     if (productData.loading === true)
         return (
@@ -46,7 +45,7 @@ export const ProductListing = () => {
                             <p>{laptop.brand}</p>
                         </div>
                         <div className='card_actions'>
-                        <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
+                            <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
                             <button onClick={() => dispatch(addToCart(laptop))}>Add To Cart</button>
                         </div>
                     </div>

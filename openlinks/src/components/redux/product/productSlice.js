@@ -16,7 +16,7 @@ const initialState = {
 export const fetchProduct = createAsyncThunk('products/fetchProduct', (state, action) => {
     // console.log("In productSlice")
     return axios
-        .get('http://localhost:3004/laptops')
+        .get('https://open-link-backend.onrender.com/api/v1/products')
         .then((res) => res.data)
 })
 
