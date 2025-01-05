@@ -11,15 +11,12 @@ const initialState = {
     error: ''
 }
 
-// console.log("In productSlice 1")
 
-export const fetchProduct = createAsyncThunk('products/fetchProduct', (state, action) => {
-    // console.log("In productSlice")
+export const fetchProduct = createAsyncThunk('products/fetchProduct', (pageNumber) => {
     return axios
-        .get('https://open-link-backend.onrender.com/api/v1/products')
+        .get(`https://open-link-backend.onrender.com/api/v1/products?page=${pageNumber || 0}}`)
         .then((res) => res.data)
 })
-
 
 // Create reducer and slice for product
 const productSlice = createSlice({

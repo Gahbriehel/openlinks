@@ -15,7 +15,6 @@ import { useSelector } from 'react-redux';
 const Nav = () => {
     const cartData = useSelector(state => state.cart)
 
-    console.log(cartData);
     return (
         <>
             <div className='nav_container'>
