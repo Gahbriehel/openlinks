@@ -1,0 +1,58 @@
+:root {
+    /* General */
+    --primary-accent: #5db34f;
+    --secondary-accent: #28743b;
+    --tertiary-accent: #9cd432;
+
+    /* Backgrounds */
+    --main-bg-color: #f5f9f5;
+    --nav-bg-color: #204729;
+    --nav-bg-color-light: #275833;
+    --nav-bg-color-dark: #1d3f25;
+    --footer-bg-color: #1b3923;
+    --input-field-bg: #eaf5e9;
+
+    /* Text colors */
+    --primary-text-color: #333333;
+    --secondary-text-color: #666666;
+    --light-text: #ffffff;
+
+    /* Borders and Dividers */
+    --border-color: #d6e4d6;
+    --border-orange: rgb(204, 137, 11);
+
+    /* Notifications / Highlights */
+    --error-warning: #d9534f;
+    --success-highlight: #3c763d;
+
+    --button-color: #5db34f;
+    --button-hover: #28743b;
+}
+
+.arrow_left {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.productDetails_container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.productDetails_container .productDetails_container_left  {
+    width: 30%;
+    height: 400px;
+}
+
+.productDetails_container .productDetails_container_left img {
+    width: 380px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.productDetails_container .productDetails_container_right {
+    width: 70%;
+    margin-left: 10px;
+}
