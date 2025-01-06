@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
-import ProductDetails from './productDetails/productDetails'
+import ProductDetails from './productDetails'
 import { addToCart } from './redux/cart/cartSlice';
 import './productListing.css'
 
@@ -9,6 +9,8 @@ export const ProductListing = () => {
     const [productDetails, setProductDetails] = useState(null);
     const productData = useSelector(state => state.product);
     const dispatch = useDispatch();
+    console.log(productData);
+    
 
     useEffect(() => {
         dispatch(fetchProduct())
