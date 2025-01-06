@@ -21,7 +21,7 @@ const ProductDetails = ({ product, backToList }) => {
                 <div className='productDetails_container_right'>
                     <div className='product_details_section1'>
                         <h2>{product.name}</h2>
-                        <p>{product.brand}</p>
+                        <p>Product brand: {product.brand}</p>
                         <p>Category: {product.category}</p>
                     </div>
                     {/* <h3>Product Details</h3> */}
