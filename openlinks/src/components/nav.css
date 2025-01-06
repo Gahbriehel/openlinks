@@ -55,21 +55,25 @@
     margin: -40px 0;
 }
 
+.logo {
+    width: 30%;
+}
+
 .logo img {
     width: 200px;
     height: 200px;
     margin-left: 50px;
-    margin-right: -50px;
-    /* margin-top: -50px; */
 }
 
 .search_box {
     display: flex;
     align-items: center;
+    width: 30%;
+    margin-right: 2rem;
 }
 
 .search_box input {
-    width: 30rem;
+    width: 25rem;
     padding: 10px 10px;
     border-radius: 10px;
     margin-right: 10px;
@@ -95,15 +99,14 @@
     background-color: var(--nav-bg-color);
     cursor: pointer;
     transition: 0.5s;
-    /* color: var(--primary-accent); */
     color: var(--light-text);
-    font-size: 23px;
+    font-size: 21px;
     display: flex;
     align-items: center;
 }
 
 .cart_btn button .cart_icon {
-    font-size: 23px;
+    font-size: 21px;
     margin-right: 5px;
 }
 
@@ -112,9 +115,15 @@
     color: var(--primary-accent);
 }
 
+.cart_btn button span {
+    color: var(--tertiary-accent);
+}
+
 .nav_top_right {
     display: flex;
     align-items: center;
+    margin-right: -17rem;
+    width: 30%;
 }
 
 .nav_top_right .cart_btn .cart_link {
@@ -123,7 +132,6 @@
 
 .account button {
     padding: 10px 20px;
-    /* margin-right: 20px; */
     font-size: 20px;
     border: none;
     background-color: var(--nav-bg-color);

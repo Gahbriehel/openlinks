@@ -4,12 +4,7 @@ import './nav.css'
 import { FaSearch } from 'react-icons/fa';
 import { MdPersonOutline, MdOutlineShoppingCart } from "react-icons/md";
 import NavBottom from './navBottom';
-
-
 import { useSelector } from 'react-redux';
-// import { FaRankingStar } from "react-icons/fa6";
-
-
 
 
 const Nav = () => {
@@ -31,7 +26,7 @@ const Nav = () => {
                             <button><MdPersonOutline className='account_icon' /> Sign In</button>
                         </div>
                         <div className='cart_btn'>
-                            <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart{cartData.number > 0 && <span>({cartData.number})</span>}</button></Link>
+                            <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart {cartData.number > 0 && <span><sup>({cartData.number})</sup></span>}</button></Link>
                         </div>
                     </div>
                 </div>
