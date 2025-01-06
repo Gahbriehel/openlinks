@@ -12,7 +12,7 @@ const ProductDetails = ({ product, backToList }) => {
         <div>
             <div style={{ cursor: "pointer" }} onClick={() => backToList()}><GoArrowLeft /></div>
             <div>
-                <img src={product.image} alt={product.image}></img>
+                <img src={product.image} alt='laptop'></img>
             </div>
             <div>
                 <h2>{product.name}</h2>
