@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './cart.css'
-import { fetchProduct } from './redux/product/productSlice';
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -20,17 +19,12 @@ const Cart = () => {
         }))
     }
 
+    const dispatch = useDispatch();
+
     console.log("Quantities", quantities);
     
 
     const productData = useSelector(state => state.cart)
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchProduct())
-        // 
-    }, [dispatch])
-
 
     const laptops = productData.products || []
     console.log("Now in cart")
