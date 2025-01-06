@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
 import ProductDetails from './productDetails/productDetails'
 import { addToCart } from './redux/cart/cartSlice';
+import './productListing.css'
 
 export const ProductListing = () => {
     const [productDetails, setProductDetails] = useState(null);
@@ -26,8 +27,9 @@ export const ProductListing = () => {
 
     if (productData.loading === true)
         return (
-            <div className='data-loading'>
-                <h2>Loading</h2>
+            <div className='data_loading'>
+                <h2 className='loading_text'>Loading</h2>
+                <div className="spinner"></div>
             </div>
         )
 
