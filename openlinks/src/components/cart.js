@@ -13,7 +13,7 @@ const Cart = () => {
     const [quantities, setQuantities] = useState(1);
 
     const handleQuantityChange = (id, value) => {
-        setQuantities(prevQuantities  => ({
+        setQuantities(prevQuantities => ({
             ...prevQuantities,
             [id]: value > 0 ? value : 1
         }))
@@ -22,7 +22,7 @@ const Cart = () => {
     const dispatch = useDispatch();
 
     console.log("Quantities", quantities);
-    
+
 
     const productData = useSelector(state => state.cart)
 
@@ -66,11 +66,11 @@ const Cart = () => {
                                                 <div className='quantity'>
                                                     <label htmlFor={`quantity-${laptop.id}`}>Quantity</label>
                                                     <input
-                                                        type="number" 
-                                                        id={`quantity-${laptop.id}`} 
-                                                        value={quantity} 
-                                                        onChange={ (e) => handleQuantityChange(laptop.id, parseInt(e.target.value))} 
-                                                        name="quantity" 
+                                                        type="number"
+                                                        id={`quantity-${laptop.id}`}
+                                                        value={quantity}
+                                                        onChange={(e) => handleQuantityChange(laptop.id, parseInt(e.target.value))}
+                                                        name="quantity"
                                                         min="1"></input>
                                                 </div>
                                             </div>
@@ -102,10 +102,10 @@ const Cart = () => {
                             })}
                         </table>
                         <div className='input_container'>
-                        <input type='text' placeholder='Enter promo code'></input>
+                            <input type='text' placeholder='Enter promo code'></input>
                             <button className='apply_btn'>Apply</button>
                         </div>
-                        <table>
+                        <table className='total_table'>
                             <tr>
                                 <td>Subtotal</td>
                                 <td>${new Intl.NumberFormat('en-us').format(laptops.reduce((acc, laptop) => {
