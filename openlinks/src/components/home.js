@@ -21,13 +21,7 @@ const Home = () => {
             <div className='home_container'>
                 <div className='heading'>
                     <h1>Laptop for Tech Enthusiasts</h1>
-                    <div className='heading_btns'>
-                        <button>Performance</button>
-                        <button>Design</button>
-                        <button>Battery Life</button>
-                        <button>Portability</button>
-                        <button>Gaming</button>
-                    </div>
+                    <h3>Innovate, Explore, Shop</h3>
                 </div>
                 <div className='main'>
                     <div className='left_side'>
