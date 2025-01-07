@@ -7,7 +7,7 @@
     /* Backgrounds */
     --main-bg-color: #f5f9f5;
     --nav-bg-color: #ffffff;
-    --nav-bg-color-light: #275833;
+    --nav-bg-color-light: #ffffff; /* #275833; */
     --nav-bg-color-dark: #1d3f25;
     --footer-bg-color: #1b3923;
     --input-field-bg: #eaf5e9;

@@ -33,6 +33,8 @@
     background: var(--nav-bg-color-light);
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 10px;
+    border: 1px solid var(--nav-bg-color-dark);
 }
 
 .card .card_img img {

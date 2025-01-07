@@ -39,11 +39,15 @@
 
 .search_box input {
     width: 25rem;
+    border: none;
     padding: 10px 10px;
     border-radius: 10px;
     margin-right: 10px;
     background: var(--input-field-bg)
+}
 
+.search_box input:hover {
+    border: 1px solid var(--button-hover);
 }
 
 .search_box button {
@@ -54,7 +58,7 @@
 }
 
 .search_box button:hover {
-    background: var(--button-hover);
+    border: 1px solid var(--button-hover);
 }
 
 .cart_btn button {
@@ -64,7 +68,7 @@
     background-color: var(--nav-bg-color);
     cursor: pointer;
     transition: 0.5s;
-    color: var(--light-text);
+    /* color: var(--light-text); */
     font-size: 21px;
     display: flex;
     align-items: center;
@@ -80,9 +84,9 @@
     color: var(--primary-accent);
 }
 
-.cart_btn button span {
+/* .cart_btn button span {
     color: var(--tertiary-accent);
-}
+} */
 
 .nav_top_right {
     display: flex;
@@ -130,7 +134,7 @@
 .nav_bottom ul li .link {
     text-decoration: none;
     font-weight: 600;
-    color: var(--primary-accent);
+    color: var(--primary-text-color);
     transition: 0.5s;
 }
 
@@ -141,6 +145,7 @@
 
 .nav_bottom ul li .disabled-link {
     pointer-events: none;
+    display: none;
     color: gray;
 }
 
