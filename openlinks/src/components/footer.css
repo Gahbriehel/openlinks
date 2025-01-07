@@ -14,7 +14,7 @@
 }
 
 .footer_top_left p {
-    color: var(--light-text);
+    color: var(--light-text-color);
 }
 
 .footer_top_right input {

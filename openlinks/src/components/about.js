@@ -17,7 +17,7 @@ const About = () => {
         </div>
         <hr />
       </div>
-      
+
       <div className='about_section2'>
         <h1>technology is our mission</h1>
         <p>We're a modern platform dedicated to transforming how people discover, compare, and purchase laptops.</p>

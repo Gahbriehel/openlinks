@@ -21,7 +21,7 @@ const Home = () => {
             <div className='home_container'>
                 <div className='heading'>
                     <h1>Laptop for Tech Enthusiasts</h1>
-                    <h3>Innovate, Explore, Shop</h3>
+                    <h5>Innovate, Explore, Shop</h5>
                 </div>
                 <div className='main'>
                     <div className='left_side'>

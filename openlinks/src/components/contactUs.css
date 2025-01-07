@@ -2,11 +2,12 @@
 
 
 .contact_container {
+    
     margin-top: 200px;
 
     width: 100%;
-    background: var(--nav-bg-color);
-    color: var(--light-text-color);
+    /* background: var(--nav-bg-color); */
+    color: var(--primary-text-color);
 }
 
 .contact_container .contact_container_top {
@@ -54,7 +55,7 @@
 
 .faq_links .link {
     text-decoration: none;
-    color: var(--light-text-color);
+    color: var(--primary-text-color);
 }
 
 .faq_links ul {
@@ -98,11 +99,13 @@
     font-size: 55px;
     font-weight: 900;
     letter-spacing: -1px;
+    color: var(--light-text-color);
 }
 
 .join_newsletter p {
     font-size: 20px;
     margin-top: -20px;
+    color: var(--light-text-color);
 }
 
 .join_newsletter .newsletter_input {
