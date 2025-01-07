@@ -5,8 +5,6 @@ import { FaLaptop } from "react-icons/fa";
 import { GiMagnifyingGlass, GiShoppingCart } from "react-icons/gi";
 
 
-
-
 const About = () => {
   return (
     <div className='about_container'>
