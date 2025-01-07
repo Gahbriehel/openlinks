@@ -139,6 +139,11 @@
     font-weight: 700;
 }
 
+.nav_bottom ul li .disabled-link {
+    pointer-events: none;
+    color: gray;
+}
+
 .nav_bottom {
     border-bottom: 2px solid var(--border-orange);
 }

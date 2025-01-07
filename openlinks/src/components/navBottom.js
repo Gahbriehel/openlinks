@@ -10,11 +10,11 @@ const NavBottom = () => {
     <div className='nav_bottom'>
     <ul>
         <li><Link to='/' className='link'><IoMdHome />Home</Link></li>
-        <li><Link to='/brands' disabled className='link'><IoIosLaptop /> Laptop Brands</Link></li>
-        <li><Link to='/categories' className='link'><MdOutlineCategory /> Categories  <RiArrowDropDownLine /></Link></li>
-        <li><Link to='/price_range' className='link'><ImPriceTags /> Price Range  <RiArrowDropDownLine /></Link></li>
-        <li><Link to='/specific' className='link'><MdFilterAlt /> Specific  <RiArrowDropDownLine /></Link></li>
-        <li><Link to='/sale' className='link'><IoMdPricetag /> SALE</Link></li>
+        <li><Link to='/brands' className='link disabled-link'><IoIosLaptop /> Laptop Brands</Link></li>
+        <li><Link to='/categories' className='link disabled-link'><MdOutlineCategory /> Categories  <RiArrowDropDownLine /></Link></li>
+        <li><Link to='/price_range' className='link disabled-link'><ImPriceTags /> Price Range  <RiArrowDropDownLine /></Link></li>
+        <li><Link to='/specific' className='link disabled-link'><MdFilterAlt /> Specific  <RiArrowDropDownLine /></Link></li>
+        <li><Link to='/sale' className='link disabled-link'><IoMdPricetag /> SALE</Link></li>
         <li><Link to='/about' className='link'>About</Link></li>
         <li><Link to='/contact' className='link'>Contact Us</Link></li>
     </ul>
