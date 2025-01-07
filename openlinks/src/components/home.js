@@ -5,11 +5,11 @@ import { IoIosArrowUp } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { FaStar, FaLaptop } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
-
+import { Pagination } from './Pagination'
 
 import { ProductListing } from './ProductListing';
 
-// import { useSelector, useDispatch } from 'react-redux';
+// import { useSelector } from 'react-redux';
 // import { fetchProduct } from './redux/product/productSlice';
 
 
@@ -92,8 +92,9 @@ const Home = () => {
                         </div>
                         <div className='products'>
                             <div className='container'>
-                                {/* What if I used state to manage when to show all product details vs. when to show only one that has been selected*/}
-                                <ProductListing /> {/* Lists all the products */}
+                                <ProductListing />
+
+                                <Pagination />
                             </div>
                         </div>
 

@@ -9,8 +9,7 @@ export const ProductListing = () => {
     const [productDetails, setProductDetails] = useState(null);
     const productData = useSelector(state => state.product);
     const dispatch = useDispatch();
-    console.log(productData);
-    
+    // console.log(productData);
 
     useEffect(() => {
         dispatch(fetchProduct())
@@ -53,23 +52,26 @@ export const ProductListing = () => {
             {productDetails === null ? laptops.map((laptop) => {
                 return (
                     <div key={laptop.id}>
-                        <div className='card'>
-                            <div className='card_img'>
-                                <img onClick={() => {
-                                    handleProductDetails(laptop)
-                                }} style={{ cursor: "pointer" }} src={laptop.image} alt='laptop' />
-                            </div>
-                            <div className='card_info'>
-                                <h3 onClick={() => {
-                                    handleProductDetails(laptop)
-                                }} style={{ cursor: "pointer" }}>{laptop.name}</h3>
-                                <p>{laptop.brand}</p>
-                            </div>
-                            <div className='card_actions'>
-                                <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
-                                <button onClick={() => dispatch(addToCart(laptop))}>Add To Cart</button>
+                        <div >
+                            <div className='card'>
+                                <div className='card_img'>
+                                    <img onClick={() => {
+                                        handleProductDetails(laptop)
+                                    }} style={{ cursor: "pointer" }} src={laptop.image} alt='laptop' />
+                                </div>
+                                <div className='card_info'>
+                                    <h3 onClick={() => {
+                                        handleProductDetails(laptop)
+                                    }} style={{ cursor: "pointer" }}>{laptop.name}</h3>
+                                    <p>{laptop.brand}</p>
+                                </div>
+                                <div className='card_actions'>
+                                    <p className='price_p'>${new Intl.NumberFormat('en-us').format(laptop.price)}</p>
+                                    <button onClick={() => dispatch(addToCart(laptop))}>Add To Cart</button>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 )
             }) : null}
