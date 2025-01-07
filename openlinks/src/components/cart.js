@@ -82,7 +82,6 @@ const Cart = () => {
                     )}
                 </div>
                 <div className='order_section'>
-                    <h1>Order here</h1>
                     <h1>My order</h1>
                     <div className='order_items'>
                         <table>
@@ -102,9 +101,32 @@ const Cart = () => {
                                 )
                             })}
                         </table>
+                        <div className='input_container'>
                         <input type='text' placeholder='Enter promo code'></input>
-                        
-                        <p>{}</p>
+                            <button className='apply_btn'>Apply</button>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>${new Intl.NumberFormat('en-us').format(laptops.reduce((acc, laptop) => {
+                                    const quantity = quantities[laptop.id] || 1;
+                                    const totalPrice = acc + laptop.price * quantity;
+                                    return totalPrice
+                                }, 0))}</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td className='total_price'>${new Intl.NumberFormat('en-us').format(laptops.reduce((acc, laptop) => {
+                                    const quantity = quantities[laptop.id] || 1;
+                                    return acc + laptop.price * quantity;
+                                }, 0))}</td>
+                            </tr>
+                        </table>
+                        <button className='checkout_btn'>Checkout</button>
                     </div>
                 </div>
             </div>
