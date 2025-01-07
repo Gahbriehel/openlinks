@@ -1,42 +1,4 @@
-:root {
-    /* General */
-    --primary-accent: #5db34f;
-    --secondary-accent: #28743b;
-    --tertiary-accent: #9cd432;
-
-    /* Backgrounds */
-    --main-bg-color: #f5f9f5;
-    --nav-bg-color: #204729;
-    --footer-bg-color: #1b3923;
-    --input-field-bg: #eaf5e9;
-
-    /* Text colors */
-    --primary-text-color: #333333;
-    --secondary-text-color: #666666;
-    --light-text-color: #ffffff;
-    --main-text-color: #a99c54;
-    --sup-text-color: #af9e3c;
-
-    /* Borders and Dividers */
-    --border-color: #d6e4d6;
-    --border-orange: rgb(204, 137, 11);
-    --border-light-orange: rgb(218, 170, 83);
-
-    /* Notifications / Highlights */
-    --error-warning: #d9534f;
-    --success-highlight: #3c763d;
-
-    --button-color: #5db34f;
-    --button-hover: #28743b;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
+@import 'root.css';
 
 .wholesale_container {
     width: 100%;
