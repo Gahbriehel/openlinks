@@ -1,0 +1,10 @@
+@import 'root.css';
+
+.signup_container {
+    width: 100%;
+    background: var(--nav-bg-color);
+    padding: 0;
+    color: var(--light-text);
+    margin-top: 220px;
+    padding-bottom: 50px;
+}
