@@ -68,7 +68,7 @@ const Home = () => {
 
                         </div>
                         <div className='_by'>
-                            <p>3rd</p>
+                            {/* <p>3rd</p> */}
                         </div>
                     </div>
                     <div className='home_body'>
@@ -100,7 +100,7 @@ const Home = () => {
 
                     </div>
                 </div>
-                <div>
+                <div className='pagination'>
                     <Pagination />
                 </div>
             </div>
