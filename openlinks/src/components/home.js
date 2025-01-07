@@ -94,13 +94,17 @@ const Home = () => {
                             <div className='container'>
                                 <ProductListing />
 
-                                <Pagination />
+
                             </div>
                         </div>
 
                     </div>
                 </div>
+                <div>
+                    <Pagination />
+                </div>
             </div>
+
         </>
     )
 }
