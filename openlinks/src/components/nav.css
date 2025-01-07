@@ -150,5 +150,9 @@
 }
 
 .nav_bottom {
-    border-bottom: 2px solid var(--border-orange);
+    border-bottom: 2px solid var(--secondary-accent);
+}
+
+.nav_bottom ul li .link-active {
+    color: var(--primary-accent);
 }
