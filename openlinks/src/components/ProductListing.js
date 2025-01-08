@@ -13,7 +13,7 @@ export const ProductListing = () => {
 
     useEffect(() => {
         dispatch(fetchProduct())
-        // 
+         // eslint-disable-next-line
     }, [])
 
     const handleProductDetails = (product) => {
@@ -36,8 +36,9 @@ export const ProductListing = () => {
 
     if (productData.error) {
         return (
-            <div className='data-loading'>
-                <h2>Failed to load data. Refresh page</h2>
+            <div className='data_loading_failed'>
+                <h2>Failed to load resource</h2>
+                <p>Check your internet connection and refresh page</p>
             </div>
         )
     }

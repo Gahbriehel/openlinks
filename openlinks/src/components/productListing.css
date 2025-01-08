@@ -25,6 +25,11 @@
     }
 }
 
+.data_loading_failed {
+    margin: 60px auto;
+    text-align: center;
+}
+
 .card {
     width: 280px;
     height: 340px ;
