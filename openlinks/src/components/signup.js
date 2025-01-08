@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './signup.css'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -20,16 +21,17 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', signUpFormData);
+
+        const url = 'https://open-link-backend.onrender.com/api/v1/users/register'
     }
 
     return (
         <div className='signup_container'>
-            <h2>Sign Up</h2>
             <div className='signup_form'>
                 <form onSubmit={handleSubmit}>
                     <h1>Sign up</h1>
                     <br />
-                    <label htmlFor='fullname'>Full Name <span>*</span></label>
+                    <label htmlFor='name'>Full Name <span>*</span></label>
                     <br />
                     <input
                         type='text'
@@ -53,7 +55,7 @@ const Signup = () => {
                         required
                     />
                     <br />
-                    <label htmlFor='subject'>Password <span>*</span></label>
+                    <label htmlFor='password'>Password <span>*</span></label>
                     <br />
                     <input
                         type='password'
@@ -65,7 +67,7 @@ const Signup = () => {
                         required
                     />
                     <br />
-                    <label htmlFor='message'>Phone number <span>*</span></label>
+                    <label htmlFor='phone'>Phone number <span>*</span></label>
                     <br />
                     <input
                         type='text'
@@ -77,9 +79,10 @@ const Signup = () => {
                         required
                     />
                     <br />
-                    
                     <button type='submit'>Sign up</button>
+                    <p className='form_text'>By continuing, you agree to our <strong>Terms of Service</strong> and acknowledge that you have read our <strong>Privacy Policy</strong>.</p>
                 </form>
+                <p className='login_text'>Already have an account? <span><Link className='login' to='/login'>Log in</Link></span></p>
             </div>
         </div>
     )

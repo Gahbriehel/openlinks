@@ -6,6 +6,7 @@ import ContactUs from './contactUs'
 import Wholesale from './wholesale'
 import Cart from './cart'
 import Signup from './signup'
+import Login from './login'
 
 const Rout = () => {
   return (
@@ -18,6 +19,7 @@ const Rout = () => {
       <Route path='/wholesale' element={<Wholesale/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/login' element={<Login/>}/>
     </Routes>
     </>
   )

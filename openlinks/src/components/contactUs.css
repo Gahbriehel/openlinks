@@ -182,14 +182,6 @@ background: var(--button-hover);
     width: 50%;
 }
 
-/* .contact_form p {
-    font-size: 25px;
-    font-weight: 900;
-    text-transform: capitalize;
-    letter-spacing: -2px;
-    padding: 10px;
-} */
-
 .contact_form input {
     width: 90%;
     height: 55px;
