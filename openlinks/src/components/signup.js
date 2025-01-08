@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import './signup.css'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addUser } from './redux/userData/userSlice';
 const Signup = () => {
 
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
     const [signUpFormData, setSignUpFormData] = useState({
         name: '',
         email: '',
@@ -18,11 +21,28 @@ const Signup = () => {
             [name]: value,
         }));
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Form submitted:', signUpFormData);
 
         const url = 'https://open-link-backend.onrender.com/api/v1/users/register'
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(signUpFormData),
+            })
+            
+            const data = await response.json();
+            console.log("Success", data);
+            dispatch(addUser(data.user));
+            navigate('/login')
+        } catch (error) {
+            console.log('Error', error);
+        }
     }
 
     return (
