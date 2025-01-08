@@ -7,6 +7,7 @@ import Wholesale from './wholesale'
 import Cart from './cart'
 import Signup from './signup'
 import Login from './login'
+import Profile from './profile'
 
 const Rout = () => {
   return (
@@ -20,6 +21,7 @@ const Rout = () => {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/profile' element={<Profile/>}/>
     </Routes>
     </>
   )
