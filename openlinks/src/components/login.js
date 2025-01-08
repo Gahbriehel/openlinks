@@ -10,45 +10,49 @@ const Login = () => {
 
 
   const [signInFormData, setSignInFormData] = useState({
-          email: '',
-          password: '',
+    email: '',
+    password: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSignInFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log('Login credentials submitted:', signInFormData);
+
+    const url = 'https://open-link-backend.onrender.com/api/v1/users/login'
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(signInFormData),
       })
-  
-      const handleChange = (e) => {
-          const { name, value } = e.target;
-          setSignInFormData((prevData) => ({
-              ...prevData,
-              [name]: value,
-          }));
+
+      const data = await response.json();
+      console.log("Success on login", data);
+
+      if (data.user) {
+
+        localStorage.setItem('user', JSON.stringify(data));
+        dispatch(data);
+        navigate('/')
       }
-      const handleSubmit = async (e) => {
-          e.preventDefault();
-          console.log('Login credentials submitted:', signInFormData);
-  
-          const url = 'https://open-link-backend.onrender.com/api/v1/users/login'
-  
-          try {
-              const response = await fetch(url, {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(signInFormData),
-              })
-              
-              const data = await response.json();
-              console.log("Success on login", data);
-              localStorage.setItem('user', JSON.stringify(data));
-              dispatch(data);
-              navigate('/')
-          } catch (error) {
-              console.log('Error', error);
-          }
-      }
+    } catch (error) {
+      console.log('Error', error);
+    }
+  }
 
   const userData = useSelector(state => state.user)
   console.log("UserData-login", userData);
-  
+
   return (
 
 

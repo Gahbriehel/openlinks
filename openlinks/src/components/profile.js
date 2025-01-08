@@ -1,7 +1,17 @@
 import React from 'react'
 import './profile.css'
+import { useSelector } from 'react-redux'
 
 const Profile = () => {
+
+    const userData = useSelector(state => state.user.user); // when you need data from the store always make sure to call useSelector
+    // and console.log the return value to know whether you're bringing in the right data in
+
+    // I updated the code in the login.js by adding the dispatch() inside a condition. Please let's be doing it that way so that we're
+    // certain dispatch is called when required or a certain condition is met. Noticed it gave an error after inputing wrong credentials in
+    // login form.
+
+    console.log(userData);
 
 
     return (
@@ -127,7 +137,7 @@ const Profile = () => {
                     <div className='button'>
                         <button>Save my information</button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
