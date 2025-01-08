@@ -124,7 +124,10 @@ const Profile = () => {
                         </div>
                     </div>
                     <hr />
-                    <button>Save my information</button>
+                    <div className='button'>
+                        <button>Save my information</button>
+                    </div>
+                    
                 </form>
             </div>
         </div>
