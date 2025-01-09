@@ -15,6 +15,7 @@ const Login = () => {
     password: '',
   })
 
+  const [error, setError] = useState(null);
 
   console.log("UserData-login", userData);
 
@@ -42,15 +43,18 @@ const Login = () => {
       })
 
       const data = await response.json();
-      console.log("Success on login", data);
 
       if (data.user) {
         localStorage.setItem('user', JSON.stringify(data));
         dispatch(addUser(data));
-        navigate('/')
+        navigate('/');
       }
+      else {
+        setError(data.message)
+      } 
     } catch (error) {
       console.log('Error', error);
+      setError("An error occurred. Please try again.")
     }
   }
 
@@ -87,7 +91,9 @@ const Login = () => {
             required
           />
           <br />
+          {error && <p className='error_message'>{`${error}. Please try again...`}</p>}
           <button type='submit'>Log in</button>
+          
           <p className='form_text'>By continuing, you agree to our <strong>Terms of Service</strong> and acknowledge that you have read our <strong>Privacy Policy</strong>.</p>
         </form>
         <p className='login_text'>Don't have an account? <span><Link className='login' to='/signup'>Sign up</Link></span></p>

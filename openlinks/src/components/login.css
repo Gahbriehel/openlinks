@@ -66,3 +66,12 @@
     color: var(--error-warning);
     font-weight: 600;
 }
+
+.error_message {
+    color: var(--error-warning);
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
