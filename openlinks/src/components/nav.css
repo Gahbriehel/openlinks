@@ -153,3 +153,70 @@
 .nav_bottom ul li .link-active {
     color: var(--primary-accent);
 }
+
+/* Hidden */
+
+
+.hidden {
+    display: none;
+}
+
+/* Dropdown */
+
+.account_info {
+    position: relative;
+  }
+
+ 
+  
+  .account_info label {
+    cursor: pointer;
+  }
+  
+  .account_box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--nav-bg-color);
+    /* padding: 10px; */
+    border: 1px solid #ddd;
+    z-index: 1000;
+    height: 200px;
+    width: 250px;
+  }
+  
+  .account_info input[type="checkbox"]:checked + label + .account_box {
+    display: block;
+  }
+  
+  .account_box .box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .account_box .box .cart_link {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: 0.5s;
+  }
+  
+  .account_box .box a:hover {
+    color: var(--tertiary-accent);
+  }
+  
+  .account_box .box form {
+    margin-top: 10px;
+  }
+  
+  .account_box .box form button {
+    background-color: var(--primary-accent);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .account_box .box form button:hover {
+    background-color: var(--tertiary-accent);
+  }
