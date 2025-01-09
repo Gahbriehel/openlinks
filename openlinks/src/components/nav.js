@@ -20,6 +20,9 @@ const Nav = () => {
         userFirstName = userFirstName.charAt(0).toUpperCase() + userFirstName.slice(1);
     }
 
+    const deleteUserLocalStorage = () => {
+        localStorage.removeItem("user")
+    }
 
 
     return (
@@ -49,9 +52,9 @@ const Nav = () => {
                                                 <Link to='/' className='cart_link disabled-link'><p className='account_text'><IoMdHeartEmpty className='icon' /><span>Saved items</span></p></Link>
                                             </div>
                                             {/* <hr/> */}
-                                            <form method='POST' action='/logout'>
+                                            <form>
                                             <MdOutlineLogout/>
-                                                <button type='submit'>Log out</button>
+                                                <button type='submit' onClick={deleteUserLocalStorage()}>Log out</button>
                                             </form>
                                         </div>
                                     </div>
