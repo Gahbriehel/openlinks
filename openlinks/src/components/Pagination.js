@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
+import './pagination.css'
 
 export const Pagination = () => {
 
@@ -14,7 +15,7 @@ export const Pagination = () => {
     }
 
     return (
-        <div>
+        <div className='pagination'>
             {pages.map(pageNumber =>
                 <button key={pageNumber}
                     style={{ cursor: "pointer" }}

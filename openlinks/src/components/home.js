@@ -95,8 +95,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className='pagination'>
-                    <Pagination />
-                </div>
+                        <Pagination />
+                    </div>
             </div>
 
         </>
