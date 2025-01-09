@@ -4,8 +4,8 @@
     width: 100%;
     background: var(--nav-bg-color);
     padding: 0 10px;
-    position: fixed; 
-    z-index: 1000; 
+    position: fixed;
+    z-index: 1000;
     margin-bottom: 80px;
     top: 0;
     left: 0;
@@ -91,7 +91,7 @@
     width: 30%;
 }
 
-.nav_top_right .cart_btn .cart_link, 
+.nav_top_right .cart_btn .cart_link,
 .nav_top_right .account .cart_link {
     text-decoration: none;
 }
@@ -165,58 +165,116 @@
 
 .account_info {
     position: relative;
-  }
+}
 
- 
-  
-  .account_info label {
+.account_info:hover {
+    background: var(--nav-bg-color);
+    color: var(--primary-accent);
+}
+
+.account_info label {
     cursor: pointer;
-  }
-  
-  .account_box {
+}
+
+.account_box {
     display: none;
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--nav-bg-color);
-    /* padding: 10px; */
     border: 1px solid #ddd;
     z-index: 1000;
-    height: 200px;
-    width: 250px;
-  }
-  
-  .account_info input[type="checkbox"]:checked + label + .account_box {
+    width: 170px;
+    text-align: center;
+}
+
+.account_info input[type="checkbox"]:checked+label+.account_box {
     display: block;
-  }
-  
-  .account_box .box {
+}
+
+.arrow_up {
+    visibility: hidden;
+}
+
+.account_info input {
+    visibility: hidden;
+}
+
+.account_info label {
+    font-size: 21px;
+}
+
+.account_box .box {
     display: flex;
     flex-direction: column;
-  }
-  
-  .account_box .box .cart_link {
+    background-color: var(--footer-bg-color);
+    background-color: var(--quaternary-text-color);
+}
+
+.account_box .box .account_links {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    width: 100%;
+
+}
+
+.account_box .box .account_links p {
+    width: 100%;
+    border-bottom: 1px solid var(--button-hover);
+}
+
+.account_box .box .account_links p:hover {
+    background-color: var(--tertiary-text-color);
+}
+
+.account_box .box .account_links .account_text {
+    color: var(--secondary-accent);
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account_box .box .account_links .account_text .icon {
+    font-size: 22px;
+}
+
+.account_box .box .account_links span {
+    margin-left: 10px;
+}
+
+.account_box .box .cart_link {
     text-decoration: none;
     color: var(--primary-text-color);
     transition: 0.5s;
-  }
-  
-  .account_box .box a:hover {
+}
+
+.account_box .box a:hover {
     color: var(--tertiary-accent);
-  }
-  
-  .account_box .box form {
-    margin-top: 10px;
-  }
-  
-  .account_box .box form button {
-    background-color: var(--primary-accent);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+}
+
+.account_box .box form {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: var(--error-warning);
+}
+
+.account_box .box form:hover {
+    color: var(--terminate-warning);
+}
+
+.account_box .box form button {
+    background-color: var(--quaternary-text-color);
+    color: var(--secondary-accent);
+    color: var(--error-warning);
     cursor: pointer;
-  }
-  
-  .account_box .box form button:hover {
-    background-color: var(--tertiary-accent);
-  }
+    border: none;
+    font-size: 18px;
+}
+
+.account_box .box form button:hover {
+    color: var(--terminate-warning);
+    /* color: var(--secondary-accent); */
+
+}

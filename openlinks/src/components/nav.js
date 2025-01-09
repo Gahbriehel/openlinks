@@ -2,22 +2,24 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import './nav.css'
 import { FaSearch } from 'react-icons/fa';
-import { MdPersonOutline, MdOutlineShoppingCart, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdPersonOutline, MdOutlineShoppingCart, MdOutlineKeyboardArrowDown, MdOutlineLogout } from "react-icons/md";
+import { IoMdHeartEmpty } from "react-icons/io";
 import { BsPersonCheck } from "react-icons/bs";
 import NavBottom from './navBottom';
 import { useSelector } from 'react-redux';
 
 
 const Nav = () => {
-    const cartData = useSelector(state => state.cart) 
+    const cartData = useSelector(state => state.cart)
     const userData = useSelector(state => state.user.user)
     let userFirstName = null;
 
     if (userData && userData.user && userData.user.name) {
-        const names = userData.user.name.split(' ');
-        userFirstName = names.length > 0 ? names[0] : null;
+        const name = userData.user.name.split(' ');
+        userFirstName = name.length > 0 ? name[0] : null;
+        userFirstName = userFirstName.charAt(0).toUpperCase() + userFirstName.slice(1);
     }
-    
+
 
 
     return (
@@ -35,13 +37,20 @@ const Nav = () => {
                         <div className='account'>
                             {userData && userData.user && userData.user.name ? (
                                 <div className='account_info'>
-                                    <input type='checkbox'></input>
-                                    <label><span><BsPersonCheck /></span>Hi, {userFirstName} <MdOutlineKeyboardArrowDown /></label>
+                                    <input type='checkbox' id='check'></input>
+                                    <label htmlFor='check'>
+                                        <span><BsPersonCheck /> </span>Hi, {userFirstName} 
+                                        <MdOutlineKeyboardArrowDown className='arrow_down'/>
+                                        </label>
                                     <div className='account_box'>
                                         <div className='box'>
-                                            <Link to='/profile' className='cart_link'><p className='account_text'>My account</p></Link>
-                                            <Link to='/' className='cart_link'><p className='account_text'>Saved items</p></Link>
+                                            <div className='account_links'>
+                                                <Link to='/profile' className='cart_link'><p className='account_text'><MdPersonOutline className='icon' /><span>My account</span></p></Link>
+                                                <Link to='/' className='cart_link'><p className='account_text'><IoMdHeartEmpty className='icon' /><span>Saved items</span></p></Link>
+                                            </div>
+                                            {/* <hr/> */}
                                             <form method='POST' action='/logout'>
+                                            <MdOutlineLogout/>
                                                 <button type='submit'>Log out</button>
                                             </form>
                                         </div>
