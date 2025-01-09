@@ -11,8 +11,12 @@ import { useSelector } from 'react-redux';
 const Nav = () => {
     const cartData = useSelector(state => state.cart) 
     const userData = useSelector(state => state.user.user)
-    // const userFirstName = userData.user.name.split(' ') || null
-    // console.log("user first name:" ,userFirstName);
+    let userFirstName = null;
+
+    if (userData && userData.user && userData.user.name) {
+        const names = userData.user.name.split(' ');
+        userFirstName = names.length > 0 ? names[0] : null;
+    }
     
 
 
@@ -29,10 +33,10 @@ const Nav = () => {
                     </div>
                     <div className='nav_top_right'>
                         <div className='account'>
-                            {userData ? (
+                            {userData && userData.user && userData.user.name ? (
                                 <div className='account_info'>
                                     <input type='checkbox'></input>
-                                    {/* <label><span><BsPersonCheck /></span>Hi, {userFirstName} <MdOutlineKeyboardArrowDown /></label> */}
+                                    <label><span><BsPersonCheck /></span>Hi, {userFirstName} <MdOutlineKeyboardArrowDown /></label>
                                     <div className='account_box'>
                                         <div className='box'>
                                             <Link to='/profile' className='cart_link'><p className='account_text'>My account</p></Link>
@@ -49,7 +53,7 @@ const Nav = () => {
                             )}
                         </div>
                         <div className='cart_btn'>
-                            <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart {cartData.number > 0 && <span><sup>({cartData.number})</sup></span>}</button></Link>
+                            <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart {cartData && cartData.number > 0 && <span><sup>({cartData.number})</sup></span>}</button></Link>
                         </div>
                     </div>
                 </div>
