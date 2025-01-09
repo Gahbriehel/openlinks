@@ -14,6 +14,8 @@ const Signup = () => {
         phone: ''
     })
 
+    const [error, setError] = useState(null);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setSignUpFormData((prevData) => ({
@@ -36,12 +38,16 @@ const Signup = () => {
                 body: JSON.stringify(signUpFormData),
             })
             
+            if (!response.ok) {
+                const errorData = await response.json();
+                setError(errorData.message)
+            }else {
             const data = await response.json();
-            console.log("Success", data);
             dispatch(addUser(data.user));
             navigate('/login')
+        }
         } catch (error) {
-            console.log('Error', error);
+            setError("An error occurred.")
         }
     }
 
@@ -99,6 +105,7 @@ const Signup = () => {
                         required
                     />
                     <br />
+                    {error && <p className='error_message'>{`${error}. Please try again...`}</p>}
                     <button type='submit'>Sign up</button>
                     <p className='form_text'>By continuing, you agree to our <strong>Terms of Service</strong> and acknowledge that you have read our <strong>Privacy Policy</strong>.</p>
                 </form>
