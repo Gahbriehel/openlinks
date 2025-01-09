@@ -3,6 +3,7 @@ import './login.css'
 import './signup.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import { addUser } from './redux/userData/userSlice'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -42,7 +43,7 @@ const Login = () => {
       if (data.user) {
 
         localStorage.setItem('user', JSON.stringify(data));
-        dispatch(data);
+        dispatch(addUser(data));
         navigate('/')
       }
     } catch (error) {
