@@ -8,8 +8,8 @@ const Profile = () => {
     const userData = useSelector(state => state.user.user);
     const [profileData, setProfileData] = useState({
         avatar: "",
-        name: "",
-        email: "",
+        name: userData.name,
+        email: userData.email,
         apartment: "",
         street: "",
         city: "",
@@ -20,21 +20,19 @@ const Profile = () => {
     const putUrl = `https://open-link-backend.onrender.com/api/v1/users/${userData.id}`
 
     console.log(putUrl);
-    const updateProfile = async (newProfile) => {
-        // try {
-        //     await axios.put(putUrl, newProfile)
-        // } catch (err) {
-        //     console.log(err)
-        // }
 
-        console.log(newProfile)
-    }
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        updateProfile(profileData)
+
+        try {
+            await axios.put(putUrl, profileData)
+        } catch (err) {
+            console.log(err)
+        }
+        console.log(profileData)
         console.log("Uploaded")
     }
+
 
     const handleFile = async (e) => {
         const file = e.target.files[0];
@@ -83,12 +81,8 @@ const Profile = () => {
                                     name='name'
                                     id='name'
                                     aria-label='Name'
-                                    value={profileData.name}
+                                    value={userData.name}
                                     disabled
-                                    onChange={(e) => setProfileData({
-                                        ...profileData,
-                                        name: e.target.value
-                                    })}
                                 />
                             </div>
                         </div>
@@ -111,13 +105,9 @@ const Profile = () => {
                                     type='email'
                                     name='email'
                                     id='email'
-                                    value={profileData.email}
+                                    value={userData.email}
                                     aria-label='Email'
                                     disabled
-                                    onChange={(e) => setProfileData({
-                                        ...profileData,
-                                        email: e.target.value
-                                    })}
                                 />
                             </div>
                         </div>
@@ -126,7 +116,7 @@ const Profile = () => {
                     <div className='delivery_information'>
                         <h2 className='header'>Delivery information</h2>
                         <div className='form_group'>
-                            <label htmlFor='name'>Apartment</label>
+                            <label htmlFor='apartment'>Apartment</label>
                             <div className="input_div">
                                 <input
                                     type='text'
@@ -138,12 +128,13 @@ const Profile = () => {
                                     onChange={(e) => setProfileData({
                                         ...profileData,
                                         apartment: e.target.value
-                                    })}
+                                    }
+                                    )}
                                 />
                             </div>
                         </div>
                         <div className='form_group'>
-                            <label htmlFor='name'>Street</label>
+                            <label htmlFor='street'>Street</label>
                             <div className="input_div">
                                 <input
                                     type='text'
@@ -155,12 +146,13 @@ const Profile = () => {
                                     onChange={(e) => setProfileData({
                                         ...profileData,
                                         street: e.target.value
-                                    })}
+                                    }
+                                    )}
                                 />
                             </div>
                         </div>
                         <div className='form_group'>
-                            <label htmlFor='name'>City</label>
+                            <label htmlFor='city'>City</label>
                             <div className="input_div">
                                 <input
                                     type='text'
@@ -172,12 +164,13 @@ const Profile = () => {
                                     onChange={(e) => setProfileData({
                                         ...profileData,
                                         city: e.target.value
-                                    })}
+                                    }
+                                    )}
                                 />
                             </div>
                         </div>
                         <div className='form_group'>
-                            <label htmlFor='name'>Zip</label>
+                            <label htmlFor='zip'>Zip code</label>
                             <div className="input_div">
                                 <input
                                     type='text'
@@ -189,12 +182,13 @@ const Profile = () => {
                                     onChange={(e) => setProfileData({
                                         ...profileData,
                                         zip: e.target.value
-                                    })}
+                                    }
+                                    )}
                                 />
                             </div>
                         </div>
                         <div className='form_group'>
-                            <label htmlFor='name'>Country</label>
+                            <label htmlFor='country'>Country</label>
                             <div className="input_div">
                                 <input
                                     type='text'
@@ -206,7 +200,8 @@ const Profile = () => {
                                     onChange={(e) => setProfileData({
                                         ...profileData,
                                         country: e.target.value
-                                    })}
+                                    }
+                                    )}
                                 />
                             </div>
                         </div>
