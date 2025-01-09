@@ -1,17 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './profile.css'
 import { useSelector } from 'react-redux'
+import axios from 'axios'
+
 
 const Profile = () => {
+    const userData = useSelector(state => state.user.user);
+    const [profileData, setProfileData] = useState({
+        avatar: "",
+        name: "",
+        email: "",
+        apartment: "",
+        street: "",
+        city: "",
+        zip: "",
+        country: "",
+    });
 
-    const userData = useSelector(state => state.user.user); // when you need data from the store always make sure to call useSelector
-    // and console.log the return value to know whether you're bringing in the right data in
+    const putUrl = `https://open-link-backend.onrender.com/api/v1/users/${userData.id}`
 
-    // I updated the code in the login.js by adding the dispatch() inside a condition. Please let's be doing it that way so that we're
-    // certain dispatch is called when required or a certain condition is met. Noticed it gave an error after inputing wrong credentials in
-    // login form.
+    console.log(putUrl);
+    const updateProfile = async (newProfile) => {
+        // try {
+        //     await axios.put(putUrl, newProfile)
+        // } catch (err) {
+        //     console.log(err)
+        // }
 
-    console.log(userData);
+        console.log(newProfile)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        updateProfile(profileData)
+        console.log("Uploaded")
+    }
+
+    const handleFile = async (e) => {
+        const file = e.target.files[0];
+        const base64 = await convertToBase64(file)
+        // if (file.size >= 300000) { // 300KB or less
+        // }
+
+        setProfileData({ ...profileData, avatar: base64 })
+    }
 
 
     return (
@@ -19,32 +51,48 @@ const Profile = () => {
             <h1 className='header'>My profile</h1>
             <h2 className='header'>Edit your profile</h2>
             <div className='form_container'>
-                <form className='profile_form'>
+                <form className='profile_form' onSubmit={handleSubmit}>
                     <div>
                         <p>Place image here</p>
                     </div>
                     <div className='form_group'>
-                        <label htmlFor='file'>Avatar <span>*</span></label>
+                        <label htmlFor='file' className='avatar_profile'>
+                            <img
+                                src={profileData.avatar || '/images/profile_avater.jpeg'}
+                                alt='avatar'
+                            />
+                        </label>
                         <div>
-                            <input className='file_input' accept='.jpeg, .jpg, .png, .webp' type='file' id='file' />
-                            <p className='input_help'>Please upload a <strong>square-shaped</strong> picture. Max 2MB. Formats allowed: <span className='file_format'>jpg</span>, <span className='file_format'>jpeg</span>, <span className='file_format'>png</span> and <span className='file_format'>webp</span></p>
+                            <input
+                                className='file_input'
+                                accept='.jpeg, .jpg, .png, .webp'
+                                type='file'
+                                id='file'
+                                onChange={(e) => handleFile(e)}
+                            />
+                            <p className='input_help'>Please upload a <strong>square-shaped</strong> picture. Max 300KB. Formats allowed: <span className='file_format'>jpg</span>, <span className='file_format'>jpeg</span>, <span className='file_format'>png</span> and <span className='file_format'>webp</span></p>
                         </div>
                     </div>
                     <hr />
                     <div className='profile_information'>
                         <div className='form_group'>
-                            <label htmlFor='name'>First name</label>
+                            <label htmlFor='name'>Full Name</label>
                             <div className="input_div">
                                 <input
                                     type='text'
                                     name='name'
                                     id='name'
                                     aria-label='Name'
+                                    value={profileData.name}
                                     disabled
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        name: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
-                        <div className='form_group'>
+                        {/* <div className='form_group'>
                             <label htmlFor='name'>Last name</label>
                             <div className="input_div">
                                 <input
@@ -55,7 +103,7 @@ const Profile = () => {
                                     disabled
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         <div className='form_group'>
                             <label htmlFor='email'>Email</label>
                             <div className="input_div">
@@ -63,8 +111,13 @@ const Profile = () => {
                                     type='email'
                                     name='email'
                                     id='email'
+                                    value={profileData.email}
                                     aria-label='Email'
                                     disabled
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        email: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -79,8 +132,13 @@ const Profile = () => {
                                     type='text'
                                     name='name'
                                     id='name'
+                                    value={profileData.apartment}
                                     aria-label='Name'
                                     required
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        apartment: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -91,8 +149,13 @@ const Profile = () => {
                                     type='text'
                                     name='name'
                                     id='name'
+                                    value={profileData.street}
                                     aria-label='Name'
                                     required
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        street: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -103,8 +166,13 @@ const Profile = () => {
                                     type='text'
                                     name='name'
                                     id='name'
+                                    value={profileData.city}
                                     aria-label='Name'
                                     required
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        city: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -115,8 +183,13 @@ const Profile = () => {
                                     type='text'
                                     name='name'
                                     id='name'
+                                    value={profileData.zip}
                                     aria-label='Name'
                                     required
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        zip: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -127,8 +200,13 @@ const Profile = () => {
                                     type='text'
                                     name='name'
                                     id='name'
+                                    value={profileData.country}
                                     aria-label='Name'
                                     required
+                                    onChange={(e) => setProfileData({
+                                        ...profileData,
+                                        country: e.target.value
+                                    })}
                                 />
                             </div>
                         </div>
@@ -144,4 +222,18 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default Profile;
+
+
+const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+        const fileReader = new FileReader()
+        fileReader.readAsDataURL(file);
+        fileReader.onload = () => {
+            resolve(fileReader.result)
+        };
+        fileReader.onerror = (error) => {
+            reject(error)
+        }
+    })
+}

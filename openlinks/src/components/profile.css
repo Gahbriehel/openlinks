@@ -102,3 +102,15 @@ input:disabled {
 .profile_form button:hover {
     background-color: var(--button-color-secondary);
 }
+
+/* Avatar Image Style*/
+
+.avatar_profile img {
+    margin: auto;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+}
