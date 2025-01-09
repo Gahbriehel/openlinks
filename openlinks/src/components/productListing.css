@@ -35,7 +35,7 @@
     height: 340px ;
     margin-top: 20px;
     margin-left: 30px;
-    background: var(--nav-bg-color-light);
+    background-color: var(--border-color);
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 10px;
