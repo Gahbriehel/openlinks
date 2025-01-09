@@ -84,10 +84,6 @@
     color: var(--primary-accent);
 }
 
-/* .cart_btn button span {
-    color: var(--tertiary-accent);
-} */
-
 .nav_top_right {
     display: flex;
     align-items: center;
@@ -95,7 +91,8 @@
     width: 30%;
 }
 
-.nav_top_right .cart_btn .cart_link {
+.nav_top_right .cart_btn .cart_link, 
+.nav_top_right .account .cart_link {
     text-decoration: none;
 }
 
@@ -106,8 +103,8 @@
     background-color: var(--nav-bg-color);
     cursor: pointer;
     transition: 0.5s;
-    color: var(--light-text);
     display: flex;
+    font-size: 21px;
     align-items: center;
 }
 

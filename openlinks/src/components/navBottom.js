@@ -18,7 +18,7 @@ const NavBottom = () => {
         <li><Link to='/price_range' className='link disabled-link'><ImPriceTags /> Price Range  <RiArrowDropDownLine /></Link></li>
         <li><Link to='/specific' className='link disabled-link'><MdFilterAlt /> Specific  <RiArrowDropDownLine /></Link></li>
         <li><Link to='/sale' className='link disabled-link'><IoMdPricetag /> SALE</Link></li>
-        <li><Link to='/about' className={currentPage === '/about' ? 'link link-active' : 'link'}>About</Link></li>
+        <li><Link to='/about' className={currentPage === '/about' ? 'link link-active' : 'link'}>About Us</Link></li>
         <li><Link to='/contact' className={currentPage === '/contact' ? 'link link-active' : 'link'}>Contact Us</Link></li>
       </ul>
     </div>

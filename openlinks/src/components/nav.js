@@ -23,7 +23,7 @@ const Nav = () => {
                     </div>
                     <div className='nav_top_right'>
                         <div className='account'>
-                            <Link to='/signup'><button><MdPersonOutline className='account_icon' /> Sign In</button></Link>
+                            <Link to='/signup' className='cart_link'><button><MdPersonOutline className='account_icon' /> Sign In</button></Link>
                         </div>
                         <div className='cart_btn'>
                             <Link to='/cart' className='cart_link'><button><MdOutlineShoppingCart className='cart_icon' /> Cart {cartData.number > 0 && <span><sup>({cartData.number})</sup></span>}</button></Link>
