@@ -6,14 +6,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addUser } from './redux/userData/userSlice'
 
 const Login = () => {
+  const userData = useSelector(state => state.user)
   const navigate = useNavigate()
   const dispatch = useDispatch();
-
 
   const [signInFormData, setSignInFormData] = useState({
     email: '',
     password: '',
   })
+
+
+  console.log("UserData-login", userData);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,7 +45,6 @@ const Login = () => {
       console.log("Success on login", data);
 
       if (data.user) {
-
         localStorage.setItem('user', JSON.stringify(data));
         dispatch(addUser(data));
         navigate('/')
@@ -50,9 +53,6 @@ const Login = () => {
       console.log('Error', error);
     }
   }
-
-  const userData = useSelector(state => state.user)
-  console.log("UserData-login", userData);
 
   return (
 

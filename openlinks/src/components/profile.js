@@ -1,25 +1,27 @@
 import React, { useState } from 'react'
 import './profile.css'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
+import { addUser } from './redux/userData/userSlice'
 
 
 const Profile = () => {
     const userData = useSelector(state => state.user.user);
+    const dispatch = useDispatch();
     const [profileData, setProfileData] = useState({
-        avatar: "",
-        name: userData.name,
-        email: userData.email,
-        apartment: "",
-        street: "",
-        city: "",
-        zip: "",
-        country: "",
+        avatar: userData.user.avatar,
+        name: userData.user.name,
+        email: userData.user.email,
+        apartment: userData.user.apartment,
+        street: userData.user.street,
+        city: userData.user.city,
+        zip: userData.user.zip,
+        country: userData.user.country,
     });
 
-    const putUrl = `https://open-link-backend.onrender.com/api/v1/users/${userData.id}`
+    const putUrl = `https://open-link-backend.onrender.com/api/v1/users/${userData.user.id}`
 
-    console.log(putUrl);
+    // console.log(putUrl);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,7 +31,9 @@ const Profile = () => {
         } catch (err) {
             console.log(err)
         }
-        console.log(profileData)
+        dispatch(addUser({ ...userData, user: profileData }))
+        localStorage.setItem('user', JSON.stringify({ ...userData, user: profileData }))
+
         console.log("Uploaded")
     }
 
@@ -81,23 +85,11 @@ const Profile = () => {
                                     name='name'
                                     id='name'
                                     aria-label='Name'
-                                    value={userData.name}
+                                    value={profileData.name}
                                     disabled
                                 />
                             </div>
                         </div>
-                        {/* <div className='form_group'>
-                            <label htmlFor='name'>Last name</label>
-                            <div className="input_div">
-                                <input
-                                    type='text'
-                                    name='name'
-                                    id='name'
-                                    aria-label='Name'
-                                    disabled
-                                />
-                            </div>
-                        </div> */}
                         <div className='form_group'>
                             <label htmlFor='email'>Email</label>
                             <div className="input_div">
@@ -105,7 +97,7 @@ const Profile = () => {
                                     type='email'
                                     name='email'
                                     id='email'
-                                    value={userData.email}
+                                    value={profileData.email}
                                     aria-label='Email'
                                     disabled
                                 />
