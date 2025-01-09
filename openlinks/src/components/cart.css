@@ -28,7 +28,6 @@
 
 .cart_card {
     display: flex;
-    /* margin: 20px 0; */
     border-bottom: 1px solid var(--button-hover);
     padding: 20px 0;
     justify-content: space-between;
@@ -102,7 +101,6 @@
     padding: 30px 0;
     width: 35%;
     margin-left: 30px;
-    /* background-color: rebeccapurple; */
     background-color: var(--nav-bg-color-dark);
     border-radius: 10px;
 }

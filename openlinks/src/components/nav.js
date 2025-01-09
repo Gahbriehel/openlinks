@@ -46,7 +46,7 @@ const Nav = () => {
                                         <div className='box'>
                                             <div className='account_links'>
                                                 <Link to='/profile' className='cart_link'><p className='account_text'><MdPersonOutline className='icon' /><span>My account</span></p></Link>
-                                                <Link to='/' className='cart_link'><p className='account_text'><IoMdHeartEmpty className='icon' /><span>Saved items</span></p></Link>
+                                                <Link to='/' className='cart_link disabled-link'><p className='account_text'><IoMdHeartEmpty className='icon' /><span>Saved items</span></p></Link>
                                             </div>
                                             {/* <hr/> */}
                                             <form method='POST' action='/logout'>

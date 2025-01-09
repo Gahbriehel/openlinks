@@ -79,6 +79,10 @@
     margin-right: 5px;
 }
 
+.cart_btn button span {
+    color: var(--button-hover);
+}
+
 .cart_btn button:hover {
     background: var(--nav-bg-color);
     color: var(--primary-accent);
@@ -277,4 +281,11 @@
     color: var(--terminate-warning);
     /* color: var(--secondary-accent); */
 
+}
+
+
+.account_links .disabled-link * {
+    pointer-events: none;
+    color: gray;
+    cursor: not-allowed !important;
 }
