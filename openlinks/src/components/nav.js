@@ -9,10 +9,10 @@ import { useSelector } from 'react-redux';
 
 
 const Nav = () => {
-    const cartData = useSelector(state => state.cart)
+    const cartData = useSelector(state => state.cart) 
     const userData = useSelector(state => state.user.user)
-    const userFirstName = userData.user.name.split(' ')
-    console.log(" user first name:" ,userFirstName);
+    // const userFirstName = userData.user.name.split(' ') || null
+    // console.log("user first name:" ,userFirstName);
     
 
 
@@ -32,7 +32,7 @@ const Nav = () => {
                             {userData ? (
                                 <div className='account_info'>
                                     <input type='checkbox'></input>
-                                    <label><span><BsPersonCheck /></span>Hi, {userFirstName} <MdOutlineKeyboardArrowDown /></label>
+                                    {/* <label><span><BsPersonCheck /></span>Hi, {userFirstName} <MdOutlineKeyboardArrowDown /></label> */}
                                     <div className='account_box'>
                                         <div className='box'>
                                             <Link to='/profile' className='cart_link'><p className='account_text'>My account</p></Link>
