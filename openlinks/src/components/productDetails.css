@@ -21,7 +21,7 @@
     width: 100%;
 }
 
-.productDetails_container .productDetails_container_left  {
+.productDetails_container .productDetails_container_left {
     width: 35%;
     height: 400px;
     margin-left: 10px;
@@ -39,21 +39,21 @@
 }
 
 .productDetails_container .productDetails_container_right .product_details_section2 .price_p {
-margin-top: 20px;
-font-size: 18px;
-font-weight: 600;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .productDetails_container .productDetails_container_right .product_details_section2 {
     margin-top: 30px;
 }
 
-.productDetails_container .productDetails_container_right button  {
+.productDetails_container .productDetails_container_right button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 60px;    
+    margin-top: 60px;
     font-size: 18px;
     background-color: var(--button-color);
     color: var(--light-text-color);
@@ -84,14 +84,14 @@ font-weight: 600;
         margin-top: 30px;
     }
 
-    .productDetails_container .productDetails_container_right button  {
+    .productDetails_container .productDetails_container_right button {
         padding: 10px 10px;
         background-color: var(--button-color);
         color: var(--light-text-color);
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-top: 20px;    
+        margin-top: 20px;
         font-size: 16px;
     }
 
@@ -100,3 +100,121 @@ font-weight: 600;
         background-color: var(--button-hover);
     }
 }
+
+@media screen and (max-width: 1400px) {
+    .productDetails_container .productDetails_container_left img {
+        width: 370px;
+        height: 270px;
+    }
+
+    .productDetails_container .productDetails_container_right {
+        width: 60%;
+        margin-left: 10px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 .price_p {
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 {
+        margin-top: 30px;
+    }
+
+    .productDetails_container .productDetails_container_right button {
+        padding: 10px 10px;
+        background-color: var(--button-color);
+        color: var(--light-text-color);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+   
+}
+
+@media screen and (max-width: 1280px) {
+    .productDetails_container .productDetails_container_left img {
+        width: 350px;
+        height: 250px;
+    }
+
+    .productDetails_container .productDetails_container_right {
+        width: 60%;
+        margin-left: 10px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 .price_p {
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 {
+        margin-top: 30px;
+    }
+
+    .productDetails_container .productDetails_container_right button {
+        padding: 10px 10px;
+        background-color: var(--button-color);
+        color: var(--light-text-color);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right button:hover {
+        color: var(--light-text-color);
+        background-color: var(--button-hover);
+    }
+
+    .arrow_left span {
+        font-size: 16px;
+        cursor: pointer;
+    }
+} 
+
+@media screen and (max-width: 1024px) {
+    .productDetails_container .productDetails_container_left img {
+        width: 280px;
+        height: 180px;
+    }
+
+    .productDetails_container .productDetails_container_right {
+        width: 55%;
+        margin-left: 10px;
+    }
+
+    .productDetails_container_right .product_details_section1 {
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 {
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 .price_p {
+        font-size: 14px;
+    }
+
+    .productDetails_container .productDetails_container_right .product_details_section2 {
+        margin-top: 30px;
+    }
+
+    .productDetails_container .productDetails_container_right button {
+        padding: 10px 10px;
+        background-color: var(--button-color);
+        color: var(--light-text-color);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .arrow_left span {
+        font-size: 12px;
+        cursor: pointer;
+    }
+} 

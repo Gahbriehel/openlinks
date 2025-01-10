@@ -85,6 +85,8 @@
     background: var(--button-hover);
 }
 
+/* Media queries */
+
 @media screen and (max-width: 1700px) {
     .card {
         width: 250px;
@@ -97,5 +99,59 @@
 
     .card .card_actions .price_p {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .card {
+        width: 230px;
+        height: 300px;
+    }
+
+    .card .card_info {
+        font-size: 12px;
+    }
+
+    .card .card_actions .price_p {
+        font-size: 12px;
+    }
+
+    .card .card_actions button {
+        font-size: 12px;
+        padding: 5px 5px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .card {
+        width: 250px;
+        height: 30;
+    }
+
+    .card .card_info {
+        font-size: 11px;
+    }
+
+    .card .card_actions .price_p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        width: 150px;
+        height: 250px;
+    }
+
+    .card .card_img img {
+        height: 140px;
+    }
+
+    .card .card_info {
+        font-size: 10px;
+    }
+
+    .card .card_actions .price_p {
+        font-size: 10px;
     }
 }

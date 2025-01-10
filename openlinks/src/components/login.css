@@ -75,3 +75,53 @@
     font-family: 'Courier New', Courier, monospace;
     margin-top: 10px;
 }
+
+
+/* Media queries */
+
+@media screen and (max-width: 1280px) {
+    .signIn_form {
+        width: 80%;
+    }
+
+    .signIn_form input {
+        width: 70%;
+    }
+
+    .signIn_form button {
+        padding: 5px 2rem;
+    }
+
+    .signIn_form .form_text {
+        width: 50%;
+        font-size: 18px;
+    }
+
+   .error_message {
+       font-size: 17px;
+   }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .signIn_form {
+        width: 80%;
+    }
+
+    .signIn_form input {
+        width: 70%;
+    }
+
+    .signIn_form button {
+        padding: 5px 2rem;
+    }
+
+    .signIn_form .form_text {
+        width: 30%;
+        font-size: 16px;
+    }
+
+    .error_message {
+        font-size: 14px;
+    }
+}

@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className='footer_bottom'>
                     <div className='footer_bottom_left'>
                         <div className='footer_logo'>
-                            <Link to='/'><img src='images/profile.png' alt='logo'></img></Link>
+                            <Link to='/' className='footer_logo_img'><img src='images/profile.png' alt='logo'></img></Link>
                         </div>
                         <div className='socials'>
                             <ul>
@@ -33,9 +33,6 @@ const Footer = () => {
                                 <li><Link to='https://www.twitter.com' className='social_link'><BsTwitterX /></Link></li>
                                 <li><Link to='https://www.instagram.com' className='social_link'><FaInstagram /></Link></li>
                             </ul>
-                            
-                            
-                            
                         </div>
                     </div>
                     <div className='footer_bottom_right'>

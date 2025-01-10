@@ -54,9 +54,6 @@ const Profile = () => {
             <h2 className='header'>Edit your profile</h2>
             <div className='form_container'>
                 <form className='profile_form' onSubmit={handleSubmit}>
-                    <div>
-                        <p>Place image here</p>
-                    </div>
                     <div className='form_group'>
                         <label htmlFor='file' className='avatar_profile'>
                             <img

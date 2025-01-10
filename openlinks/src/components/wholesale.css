@@ -277,3 +277,220 @@ grid-template-columns: 350px 350px 350px 350px 350px;
         padding: 15px 6rem;
     }
 }
+
+
+@media screen and (max-width: 1400px) {
+    .container_top_text h1 {
+        font-size: 35px;
+    }
+
+    .container_top_text h3 {
+        font-size: 25px;
+    }
+
+    .container_top_text h2 {
+        font-size: 35px;
+    }
+
+    .container_top_text p {
+        font-size: 14px;
+    }
+
+    .container_top_text button {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .wholesale_container_mid_text .para {
+        font-size: 14px;
+    }
+
+    .wholesale_container_mid_text h3 {
+        font-size: 40px;
+    }
+
+    .brand_logos {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 4rem;
+    }
+
+    .brand_logo img {
+        height: 80px;
+        width: 120px;
+    }
+
+    .wholesale_container_bottom {
+        padding: 20px;
+    }
+
+    .wholesale_container_bottom_text .para {
+        font-size: 14px;
+    }
+
+    .wholesale_container_bottom_text h3 {
+        font-size: 40px;
+    }
+
+    .partner_form p {
+        font-size: 18px;
+    }
+
+    .partner_form input {
+        width: 100%;
+    }
+
+    .partner_form textarea {
+        width: 100%;
+    }
+
+    .partner_form button {
+        padding: 10px 4rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container_top_text h1 {
+        font-size: 30px;
+    }
+
+    .container_top_text h3 {
+        font-size: 20px;
+    }
+
+    .container_top_text h2 {
+        font-size: 30px;
+    }
+
+    .container_top_text p {
+        font-size: 12px;
+    }
+
+    .container_top_text button {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .wholesale_container_mid_text .para {
+        font-size: 12px;
+    }
+
+    .wholesale_container_mid_text h3 {
+        font-size: 35px;
+    }
+
+    .brand_logos {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 2rem;
+    }
+
+    .brand_logo img {
+        height: 70px;
+        width: 100px;
+    }
+
+    .wholesale_container_bottom {
+        padding: 10px;
+    }
+
+    .wholesale_container_bottom_text .para {
+        font-size: 12px;
+    }
+
+    .wholesale_container_bottom_text h3 {
+        font-size: 35px;
+    }
+
+    .partner_form p {
+        font-size: 16px;
+    }
+
+    .partner_form input {
+        width: 100%;
+    }
+
+    .partner_form textarea {
+        width: 100%;
+    }
+
+    .partner_form button {
+        padding: 8px 2rem;
+    }
+
+    .wholesale_container_mid {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container_top_text h1 {
+        font-size: 25px;
+    }
+
+    .container_top_text h3 {
+        font-size: 18px;
+    }
+
+    .container_top_text h2 {
+        font-size: 25px;
+    }
+
+    .container_top_text p {
+        font-size: 10px;
+    }
+
+    .container_top_text button {
+        padding: 6px;
+        font-size: 8px;
+    }
+
+    .wholesale_container_mid_text .para {
+        font-size: 10px;
+    }
+
+    .wholesale_container_mid_text h3 {
+        font-size: 30px;
+    }
+
+    .brand_logos {
+        grid-template-columns: 1fr;
+        margin-left: 1rem;
+    }
+
+    .brand_logo img {
+        height: 60px;
+        width: 80px;
+    }
+
+    .wholesale_container_bottom {
+        padding: 5px;
+    }
+
+    .wholesale_container_bottom_text .para {
+        font-size: 10px;
+    }
+
+    .wholesale_container_bottom_text h3 {
+        font-size: 30px;
+    }
+
+    .partner_form p {
+        font-size: 14px;
+    }
+
+    .partner_form input {
+        width: 100%;
+    }
+
+    .partner_form textarea {
+        width: 100%;
+    }
+
+    .partner_form button {
+        padding: 6px 1rem;
+    }
+
+    .wholesale_container_mid {
+        display: none;
+    }
+} 

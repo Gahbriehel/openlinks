@@ -194,3 +194,123 @@
 .checkout_btn:hover {
     background-color: var(--button-hover);
 }
+
+/* Media queries */
+
+@media screen and (max-width: 1700px) {
+    .cart_container {
+        padding: 30px 50px;
+    }
+
+    .cart_container .cart_main .shopping_cart {
+        width: 100%;
+    }
+
+    .order_section {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .cart_container {
+        padding: 20px 40px;
+    }
+
+    .cart_container .cart_main {
+        flex-direction: column;
+    }
+
+    .cart_container .cart_main .shopping_cart {
+        width: 100%;
+    }
+
+    .order_section {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .cart_container {
+        padding: 10px 20px;
+    }
+
+    .cart_container .cart_main {
+        flex-direction: column;
+    }
+
+    .cart_container .cart_main .shopping_cart {
+        width: 100%;
+    }
+
+    .order_section {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cart_card .product_details .cart_card_img img {
+        width: 120px;
+        height: 90px;
+    }
+
+    .cart_card .cart_card_actions button {
+        width: 90px;
+        font-size: 12px;
+    }
+
+    .cart_card .cart_card_actions .quantity input {
+        width: 40px;
+    }
+
+    .checkout_btn {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cart_container {
+        padding: 15px 30px;
+    }
+
+    .cart_container .cart_main {
+        flex-direction: column;
+    }
+
+    .cart_container .cart_main .shopping_cart {
+        width: 100%;
+    }
+
+    .order_section {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .cart_card .product_details .cart_card_img img {
+        width: 150px;
+        height: 100px;
+    }
+
+    .cart_card .cart_card_actions button {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .cart_card .cart_card_actions .quantity input {
+        width: 50px;
+    }
+
+    .checkout_btn {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .cart_card .cart_card_actions .quantity input {
+        width: 70px;
+    }
+}
