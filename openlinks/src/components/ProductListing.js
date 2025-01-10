@@ -49,7 +49,6 @@ export const ProductListing = () => {
                 backToList={handleProductDetails}
                 product={productDetails}
             /> : null}
-
             {productDetails === null ? laptops.map((laptop) => {
                 return (
                     <div key={laptop.id}>

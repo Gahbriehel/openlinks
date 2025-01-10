@@ -13,7 +13,7 @@ const ProductDetails = ({ product, backToList }) => {
 
     return (
         <div>
-            <div className='arrow_left' onClick={() => backToList()}><FaArrowLeft /></div>
+            <div className='arrow_left' onClick={() => backToList()}><FaArrowLeft /> <span> Continue shopping</span></div>
             <div className='productDetails_container'>
                 <div className='productDetails_container_left'>
                     <img src={product.image} alt='laptop'></img>

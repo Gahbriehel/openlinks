@@ -84,3 +84,18 @@
 .card .card_actions button:hover {
     background: var(--button-hover);
 }
+
+@media screen and (max-width: 1700px) {
+    .card {
+        width: 250px;
+        height: 320px;
+    }
+
+    .card .card_info {
+        font-size: 13px;
+    }
+
+    .card .card_actions .price_p {
+        font-size: 16px;
+    }
+}

@@ -64,14 +64,15 @@ const Cart = () => {
                                             <div className='cart_card_actions'>
                                                 <button onClick={() => dispatch(removeFromCart(laptop))}>Remove item <span><FaTrashAlt /></span></button>
                                                 <div className='quantity'>
-                                                    <label htmlFor={`quantity-${laptop.id}`}>Quantity</label>
+                                                    <label htmlFor={`quantity-${laptop.id}`}>Quantity: </label>
                                                     <input
                                                         type="number"
                                                         id={`quantity-${laptop.id}`}
                                                         value={quantity}
                                                         onChange={(e) => handleQuantityChange(laptop.id, parseInt(e.target.value))}
                                                         name="quantity"
-                                                        min="1"></input>
+                                                        min="1"
+                                                        max="99"></input>
                                                 </div>
                                             </div>
                                         </div>

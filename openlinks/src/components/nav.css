@@ -288,3 +288,64 @@
     color: gray;
     cursor: not-allowed !important;
 }
+
+
+/* Media Query */
+
+@media screen and (max-width: 1700px) {
+    .nav_top_right {
+        margin-right: -10rem;
+    }
+
+    .search_box {
+        margin-right: 1rem;
+    }
+
+    .nav_top_right .cart_btn button {
+        margin-right: 10px;
+    }
+
+    .nav_top_right .account button {
+        margin-right: 10px;
+    }
+
+    .nav_bottom ul {
+        padding: 2rem 1rem;
+    }
+
+    .nav_bottom ul li .link {
+        font-size: 16px;
+    }
+
+    .nav_bottom ul li .link:hover {
+        font-size: 18px;
+    }
+
+    .nav_bottom ul li .link-active {
+        font-size: 18px;
+    }
+
+    .nav_bottom ul li .disabled-link {
+        display: none;
+    }
+
+    .account_box {
+        width: 150px;
+    }
+
+    .account_box .box .account_links {
+        font-size: 14px;
+    }
+
+    .account_box .box .account_links .account_text {
+        padding: 5px 0;
+    }
+
+    .account_box .box .account_links .account_text .icon {
+        font-size: 18px;
+    }
+
+    .account_box .box form button {
+        font-size: 16px;
+    }
+}
