@@ -41,7 +41,7 @@ const Nav = () => {
                             {userData && userData.user && userData.user.name ? (
                                 <div className='account_info'>
                                     <input type='checkbox' id='check'></input>
-                                    <label htmlFor='check'>
+                                    <label htmlFor='check' className='user_greeting'>
                                         <span><BsPersonCheck /> </span>Hi, {userFirstName} 
                                         <MdOutlineKeyboardArrowDown className='arrow_down'/>
                                         </label>
@@ -58,7 +58,6 @@ const Nav = () => {
                                             </form>
                                         </div>
                                     </div>
-                                    {/* <button><BsPersonCheck className='account_icon' /> Hi, {userData.user.name}</button> */}
                                 </div>
                             ) : (
                                 <Link to='/signup' className='cart_link'><button><MdPersonOutline className='account_icon' /> Sign In</button></Link>

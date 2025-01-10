@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import './login.css'
 import './signup.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addUser } from './redux/userData/userSlice'
 
 const Login = () => {
-  const userData = useSelector(state => state.user)
+  // const userData = useSelector(state => state.user)
   const navigate = useNavigate()
   const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ const Login = () => {
 
   const [error, setError] = useState(null);
 
-  console.log("UserData-login", userData);
+  // console.log("UserData-login", userData);
 
 
   const handleChange = (e) => {
@@ -47,7 +47,10 @@ const Login = () => {
       if (data.user) {
         localStorage.setItem('user', JSON.stringify(data));
         dispatch(addUser(data));
+        const userFirstName = data.user.name.split(' ')[0];
+        const userFirstNameCapitalized = userFirstName.charAt(0).toUpperCase() + userFirstName.slice(1);
         navigate('/');
+        alert(`Welcome back ${userFirstNameCapitalized}!`);
       }
       else {
         setError(data.message)
@@ -93,7 +96,6 @@ const Login = () => {
           <br />
           {error && <p className='error_message'>{`${error}. Please try again...`}</p>}
           <button type='submit'>Log in</button>
-          
           <p className='form_text'>By continuing, you agree to our <strong>Terms of Service</strong> and acknowledge that you have read our <strong>Privacy Policy</strong>.</p>
         </form>
         <p className='login_text'>Don't have an account? <span><Link className='login' to='/signup'>Sign up</Link></span></p>
