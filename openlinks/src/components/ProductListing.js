@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
 import ProductDetails from './productDetails'
 import { addToCart } from './redux/cart/cartSlice';
-import './productListing.css'
+import './css/productListing.css'
 
 export const ProductListing = () => {
     const [productDetails, setProductDetails] = useState(null);

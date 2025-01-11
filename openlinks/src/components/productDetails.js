@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 import { addToCart } from './redux/cart/cartSlice';
-import './productDetails.css'
+import './css/productDetails.css'
 import { FaArrowLeft } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 

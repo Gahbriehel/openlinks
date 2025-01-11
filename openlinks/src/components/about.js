@@ -1,6 +1,6 @@
 import React from 'react'
-import './nav.css'
-import './about.css'
+import './css/nav.css'
+import './css/about.css'
 import { FaLaptop } from "react-icons/fa";
 import { GiMagnifyingGlass, GiShoppingCart } from "react-icons/gi";
 

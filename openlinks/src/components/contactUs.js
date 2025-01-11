@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import './nav.css'
-import './contactUs.css'
+import './css/nav.css'
+import './css/contactUs.css'
 import { FaAngleRight } from "react-icons/fa";
 import { PiPackage } from "react-icons/pi";
 import { RiVerifiedBadgeLine, RiSecurePaymentFill } from "react-icons/ri";

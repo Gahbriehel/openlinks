@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.css'
+import './css/footer.css'
 import { Link } from 'react-router-dom'
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";

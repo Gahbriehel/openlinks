@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './wholesale.css';
-import './nav.css';
+import './css/wholesale.css';
+import './css/nav.css';
 import { Link } from 'react-router-dom';
 
 const Wholesale = () => {

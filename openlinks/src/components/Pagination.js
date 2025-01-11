@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchProduct } from './redux/product/productSlice';
-import './pagination.css'
+import './css/pagination.css'
 
 export const Pagination = () => {
 

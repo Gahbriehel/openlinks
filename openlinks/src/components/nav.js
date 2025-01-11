@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import './nav.css'
+import './css/nav.css'
 import { FaSearch } from 'react-icons/fa';
 import { MdPersonOutline, MdOutlineShoppingCart, MdOutlineKeyboardArrowDown, MdOutlineLogout } from "react-icons/md";
 import { IoMdHeartEmpty } from "react-icons/io";

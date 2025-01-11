@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './login.css'
-import './signup.css'
+import './css/login.css'
+import './css/signup.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUser } from './redux/userData/userSlice'

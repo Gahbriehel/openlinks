@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './profile.css'
+import './css/profile.css'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { addUser } from './redux/userData/userSlice'

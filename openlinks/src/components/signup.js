@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './signup.css'
+import './css/signup.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addUser } from './redux/userData/userSlice';

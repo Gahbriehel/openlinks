@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './cart.css'
+import './css/cart.css'
 import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
