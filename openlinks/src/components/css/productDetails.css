@@ -12,6 +12,7 @@
 .arrow_left span {
     font-size: 20px;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 .productDetails_container {
