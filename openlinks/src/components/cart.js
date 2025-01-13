@@ -5,18 +5,30 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaTrashAlt } from "react-icons/fa";
 import { removeFromCart } from './redux/cart/cartSlice';
+import { IoMdCloseCircle } from "react-icons/io";
+import { RiVisaLine } from "react-icons/ri";
+import { RiMastercardLine } from "react-icons/ri";
 
 
 
 const Cart = () => {
 
     const [quantities, setQuantities] = useState(1);
+    const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);
 
     const handleQuantityChange = (id, value) => {
         setQuantities(prevQuantities => ({
             ...prevQuantities,
             [id]: value > 0 ? value : 1
         }))
+    }
+
+    const showCheckout = () => {
+        setIsCheckoutVisible(true);
+    }
+
+    const hideCheckout = () => {
+        setIsCheckoutVisible(false);
     }
 
     const dispatch = useDispatch();
@@ -32,7 +44,7 @@ const Cart = () => {
     return (
         <div className='cart_container'>
             <div className='return_text'>
-                <Link to='/' className='return_link'><p><FaArrowLeft /> Continue shopping</p></Link>
+                <Link to='/' className='return_link'><p><FaArrowLeft /><span>Continue shopping</span></p></Link>
             </div>
             <div className='cart_main'>
                 <div className='shopping_cart'>
@@ -127,7 +139,42 @@ const Cart = () => {
                                 }, 0))}</td>
                             </tr>
                         </table>
-                        <button className='checkout_btn'>Checkout</button>
+                        <button className='checkout_btn' onClick={showCheckout}>Checkout</button>
+                        {isCheckoutVisible && (
+                            <div className='checkout_modal'>
+                                <div className='checkout_modal_content'>
+                                    <span className='close' onClick={hideCheckout}><IoMdCloseCircle className='close_modal' /></span>
+                                    <div className='payments'>
+                                        <span><img src='/images/visa-logo-svg-vector.svg' alt='visa-logo' className='checkout_logo' /></span>
+                                        <span><img src='/images/mastercard.svg' alt='mastercard logo' className='checkout_logo disabled' /></span>
+                                        <span><img src='/images/paypal.svg' alt='paypal logo' className='checkout_logo disabled' /></span>
+                                    </div>
+                                    <div className='checkout_form'>
+                                        <div className='input_container'>
+                                            <label htmlFor='name'>cardholder's name</label>
+                                            <br />
+                                            <input type='text' id='name'></input>
+                                        </div>
+                                        <div className='input_container'>
+                                            <label htmlFor='ccn'>card number</label>
+                                            <br />
+                                            <input type='tel' id='ccn' inputMode='numeric' maxLength='19' pattern="[0-9\s]{13,19}"></input>
+                                        </div>
+                                        <div className='checkout_flex'>
+                                            <div className='input_container'>
+                                                <label htmlFor='expiry'>expiry date</label>
+                                                <input type='date' id='expiry'></input>
+                                            </div>
+                                            <div className='input_container'>
+                                                <label htmlFor='cvv'>cvv</label>
+                                                <input type='password' id='cvv' max={3}></input>
+                                            </div>
+                                        </div>
+                                        <button className='checkout_btn'>Place order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
