@@ -1,20 +1,25 @@
 import React, { useState } from 'react'
 import './css/cart.css'
 import { FaArrowLeft } from "react-icons/fa6";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaTrashAlt } from "react-icons/fa";
 import { removeFromCart } from './redux/cart/cartSlice';
 import { IoMdCloseCircle } from "react-icons/io";
-import { RiVisaLine } from "react-icons/ri";
-import { RiMastercardLine } from "react-icons/ri";
-
 
 
 const Cart = () => {
 
     const [quantities, setQuantities] = useState(1);
     const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const handlePayNow = () => {
+        alert('Payment successful! Redirecting to homepage...');
+        setTimeout(() => {
+            navigate('/');
+        }, 3000);
+    }
 
     const handleQuantityChange = (id, value) => {
         setQuantities(prevQuantities => ({
@@ -100,7 +105,6 @@ const Cart = () => {
                         <table>
                             <tr>
                                 <th>Product</th>
-                                {/* <th>Quantity</th> */}
                                 <th>Price</th>
                             </tr>
                             {laptops.map((laptop) => {
@@ -108,7 +112,6 @@ const Cart = () => {
                                 return (
                                     <tr key={laptop.id}>
                                         <td>{quantity} x {laptop.name}</td>
-                                        {/* <td>{quantity}</td> */}
                                         <td>${new Intl.NumberFormat('en-us').format(laptop.price * quantity)}</td>
                                     </tr>
                                 )
@@ -150,29 +153,32 @@ const Cart = () => {
                                         <span><img src='/images/paypal.svg' alt='paypal logo' className='checkout_logo disabled' /></span>
                                     </div>
                                     <div className='checkout_form'>
-                                        <div className='input_container'>
+                                        <div className='checkout_input_container'>
                                             <label htmlFor='name'>cardholder's name</label>
-                                            <br />
-                                            <input type='text' id='name'></input>
+                                            {/* <br /> */}
+                                            <input required type='text' id='name'></input>
                                         </div>
-                                        <div className='input_container'>
+                                        <div className='checkout_input_container'>
                                             <label htmlFor='ccn'>card number</label>
                                             <br />
-                                            <input type='tel' id='ccn' inputMode='numeric' maxLength='19' pattern="[0-9\s]{13,19}"></input>
+                                            <input required type='tel' id='ccn' inputMode='numeric' maxLength='19' pattern="[0-9\s]{13,19}" placeholder='**** **** **** 1234'></input>
                                         </div>
                                         <div className='checkout_flex'>
-                                            <div className='input_container'>
+                                            <div className='checkout_input_container checkout_flex1' >
                                                 <label htmlFor='expiry'>expiry date</label>
-                                                <input type='date' id='expiry'></input>
+                                                <br />
+                                                <input required type='date' id='expiry'></input>
                                             </div>
-                                            <div className='input_container'>
+                                            <div className='checkout_input_container checkout_flex2'>
                                                 <label htmlFor='cvv'>cvv</label>
-                                                <input type='password' id='cvv' max={3}></input>
+                                                <br />
+                                                <input required type='password' id='cvv' max='3'></input>
                                             </div>
                                         </div>
-                                        <button className='checkout_btn'>Place order</button>
                                     </div>
+
                                 </div>
+                                <button className='pay_now_btn' onClick={handlePayNow}>PAY NOW</button>
                             </div>
                         )}
                     </div>
