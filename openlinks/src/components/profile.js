@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './css/profile.css';
-import { useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import axios from 'axios';
-import { addUser } from './redux/userData/userSlice';
+import {addUser} from './redux/userData/userSlice';
 
 const Profile = () => {
   const userData = useSelector(state => state.user.user);
@@ -27,13 +27,15 @@ const Profile = () => {
     e.preventDefault();
 
     try {
-      console.log('ID for user', putUrl);
-      await axios.put(putUrl, JSON.stringify(profileData));
+      const headers = {
+        'Authorization': `Bearer ${userData.token}`
+      };
+      await axios.put(putUrl, JSON.stringify(profileData), {headers});
     } catch (err) {
       console.log(err);
     }
-    dispatch(addUser({ ...userData, user: profileData }));
-    localStorage.setItem('user', JSON.stringify({ ...userData, user: profileData }));
+    dispatch(addUser({...userData, user: profileData}));
+    localStorage.setItem('user', JSON.stringify({...userData, user: profileData}));
 
     console.log('Uploaded');
   };
@@ -44,7 +46,7 @@ const Profile = () => {
     // if (file.size >= 300000) { // 300KB or less
     // }
 
-    setProfileData({ ...profileData, avatar: base64 });
+    setProfileData({...profileData, avatar: base64});
   };
 
   return (
@@ -68,10 +70,12 @@ const Profile = () => {
                 id='file'
                 onChange={(e) => handleFile(e)}
               />
-              <p className='input_help'>Please upload a <strong>square-shaped</strong> picture. Max 300KB. Formats allowed: <span className='file_format'>jpg</span>, <span className='file_format'>jpeg</span>, <span className='file_format'>png</span> and <span className='file_format'>webp</span></p>
+              <p className='input_help'>Please upload a <strong>square-shaped</strong> picture. Max 300KB. Formats
+                allowed: <span className='file_format'>jpg</span>, <span className='file_format'>jpeg</span>, <span
+                  className='file_format'>png</span> and <span className='file_format'>webp</span></p>
             </div>
           </div>
-          <hr />
+          <hr/>
           <div className='profile_information'>
             <div className='form_group'>
               <label htmlFor='name'>Full Name</label>
@@ -100,7 +104,7 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <hr />
+          <hr/>
           <div className='delivery_information'>
             <h2 className='header'>Delivery information</h2>
             <div className='form_group'>
@@ -114,9 +118,9 @@ const Profile = () => {
                   aria-label='Name'
                   required
                   onChange={(e) => setProfileData({
-                    ...profileData,
-                    apartment: e.target.value
-                  }
+                      ...profileData,
+                      apartment: e.target.value
+                    }
                   )}
                 />
               </div>
@@ -132,9 +136,9 @@ const Profile = () => {
                   aria-label='Name'
                   required
                   onChange={(e) => setProfileData({
-                    ...profileData,
-                    street: e.target.value
-                  }
+                      ...profileData,
+                      street: e.target.value
+                    }
                   )}
                 />
               </div>
@@ -150,9 +154,9 @@ const Profile = () => {
                   aria-label='Name'
                   required
                   onChange={(e) => setProfileData({
-                    ...profileData,
-                    city: e.target.value
-                  }
+                      ...profileData,
+                      city: e.target.value
+                    }
                   )}
                 />
               </div>
@@ -168,9 +172,9 @@ const Profile = () => {
                   aria-label='Name'
                   required
                   onChange={(e) => setProfileData({
-                    ...profileData,
-                    zip: e.target.value
-                  }
+                      ...profileData,
+                      zip: e.target.value
+                    }
                   )}
                 />
               </div>
@@ -186,15 +190,15 @@ const Profile = () => {
                   aria-label='Name'
                   required
                   onChange={(e) => setProfileData({
-                    ...profileData,
-                    country: e.target.value
-                  }
+                      ...profileData,
+                      country: e.target.value
+                    }
                   )}
                 />
               </div>
             </div>
           </div>
-          <hr />
+          <hr/>
           <div className='button'>
             <button>Save my information</button>
           </div>
