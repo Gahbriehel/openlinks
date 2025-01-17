@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './css/nav.css'
 import { FaSearch } from 'react-icons/fa';
 import { MdPersonOutline, MdOutlineShoppingCart, MdOutlineKeyboardArrowDown, MdOutlineLogout } from "react-icons/md";
@@ -10,6 +10,8 @@ import { useSelector } from 'react-redux';
 
 
 const Nav = () => {
+    const navigate = useNavigate()
+
     const cartData = useSelector(state => state.cart)
     const userData = useSelector(state => state.user.user)
     let userFirstName = null;
@@ -22,6 +24,7 @@ const Nav = () => {
 
     const deleteUserLocalStorage = () => {
         localStorage.removeItem("user")
+        navigate('/')
     }
 
 
@@ -54,13 +57,13 @@ const Nav = () => {
                                             {/* <hr/> */}
                                             <form>
                                             <MdOutlineLogout/>
-                                                <button type='submit' onClick={deleteUserLocalStorage()}>Log out</button>
+                                                <button type='submit' onClick={deleteUserLocalStorage}>Log out</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                             ) : (
-                                <Link to='/signup' className='cart_link'><button><MdPersonOutline className='account_icon' /> Sign In</button></Link>
+                                <Link to='/login' className='cart_link'><button><MdPersonOutline className='account_icon' /> Sign In</button></Link>
                             )}
                         </div>
                         <div className='cart_btn'>
