@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import './css/cart.css'
-import { FaArrowLeft } from "react-icons/fa6";
-import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { FaTrashAlt } from "react-icons/fa";
-import { removeFromCart } from './redux/cart/cartSlice';
-import { IoMdCloseCircle } from "react-icons/io";
+import {FaArrowLeft} from "react-icons/fa6";
+import {Link, useNavigate} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {FaTrashAlt} from "react-icons/fa";
+import {removeFromCart, clearCart} from './redux/cart/cartSlice';
+import {IoMdCloseCircle} from "react-icons/io";
 
 
 const Cart = () => {
-
+    const dispatch = useDispatch();
     const [quantities, setQuantities] = useState(1);
     const [isCheckoutVisible, setIsCheckoutVisible] = useState(false);
     const navigate = useNavigate();
 
     const handlePayNow = () => {
         alert('Payment successful! Redirecting to homepage...');
+        dispatch(clearCart())
         setTimeout(() => {
             navigate('/');
         }, 3000);
@@ -35,9 +36,6 @@ const Cart = () => {
     const hideCheckout = () => {
         setIsCheckoutVisible(false);
     }
-
-    const dispatch = useDispatch();
-
     console.log("Quantities", quantities);
 
 
@@ -49,7 +47,7 @@ const Cart = () => {
     return (
         <div className='cart_container'>
             <div className='return_text'>
-                <Link to='/' className='return_link'><p><FaArrowLeft /><span>Continue shopping</span></p></Link>
+                <Link to='/' className='return_link'><p><FaArrowLeft/><span>Continue shopping</span></p></Link>
             </div>
             <div className='cart_main'>
                 <div className='shopping_cart'>
@@ -65,7 +63,7 @@ const Cart = () => {
                                         <div className='cart_card'>
                                             <div className='product_details'>
                                                 <div className='cart_card_img'>
-                                                    <img src={laptop.image} alt='laptop' />
+                                                    <img src={laptop.image} alt='laptop'/>
                                                 </div>
                                                 <div className='cart_card_info'>
                                                     <div className='up'>
@@ -79,7 +77,8 @@ const Cart = () => {
                                                 </div>
                                             </div>
                                             <div className='cart_card_actions'>
-                                                <button onClick={() => dispatch(removeFromCart(laptop))}>Remove item <span><FaTrashAlt /></span></button>
+                                                <button onClick={() => dispatch(removeFromCart(laptop))}>Remove
+                                                    item <span><FaTrashAlt/></span></button>
                                                 <div className='quantity'>
                                                     <label htmlFor={`quantity-${laptop.id}`}>Quantity: </label>
                                                     <input
@@ -146,11 +145,15 @@ const Cart = () => {
                         {isCheckoutVisible && (
                             <div className='checkout_modal'>
                                 <div className='checkout_modal_content'>
-                                    <span className='close' onClick={hideCheckout}><IoMdCloseCircle className='close_modal' /></span>
+                                    <span className='close' onClick={hideCheckout}><IoMdCloseCircle
+                                        className='close_modal'/></span>
                                     <div className='payments'>
-                                        <span><img src='/images/visa-logo-svg-vector.svg' alt='visa-logo' className='checkout_logo' /></span>
-                                        <span><img src='/images/mastercard.svg' alt='mastercard logo' className='checkout_logo disabled' /></span>
-                                        <span><img src='/images/paypal.svg' alt='paypal logo' className='checkout_logo disabled' /></span>
+                                        <span><img src='/images/visa-logo-svg-vector.svg' alt='visa-logo'
+                                                   className='checkout_logo'/></span>
+                                        <span><img src='/images/mastercard.svg' alt='mastercard logo'
+                                                   className='checkout_logo disabled'/></span>
+                                        <span><img src='/images/paypal.svg' alt='paypal logo'
+                                                   className='checkout_logo disabled'/></span>
                                     </div>
                                     <div className='checkout_form'>
                                         <div className='checkout_input_container'>
@@ -160,18 +163,19 @@ const Cart = () => {
                                         </div>
                                         <div className='checkout_input_container'>
                                             <label htmlFor='ccn'>card number</label>
-                                            <br />
-                                            <input required type='tel' id='ccn' inputMode='numeric' maxLength='19' pattern="[0-9\s]{13,19}" placeholder='**** **** **** 1234'></input>
+                                            <br/>
+                                            <input required type='tel' id='ccn' inputMode='numeric' maxLength='19'
+                                                   pattern="[0-9\s]{13,19}" placeholder='**** **** **** 1234'></input>
                                         </div>
                                         <div className='checkout_flex'>
-                                            <div className='checkout_input_container checkout_flex1' >
+                                            <div className='checkout_input_container checkout_flex1'>
                                                 <label htmlFor='expiry'>expiry date</label>
-                                                <br />
+                                                <br/>
                                                 <input required type='date' id='expiry'></input>
                                             </div>
                                             <div className='checkout_input_container checkout_flex2'>
                                                 <label htmlFor='cvv'>cvv</label>
-                                                <br />
+                                                <br/>
                                                 <input required type='password' id='cvv' max='3'></input>
                                             </div>
                                         </div>
