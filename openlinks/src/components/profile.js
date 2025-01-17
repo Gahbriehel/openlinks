@@ -21,14 +21,14 @@ const Profile = () => {
 
   const putUrl = `https://open-link-backend.onrender.com/api/v1/users/${userData.user._id}`;
 
-  // console.log(putUrl);
+  // console.log(putUrl);soel
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       console.log('ID for user', putUrl);
-      await axios.put(putUrl, profileData);
+      await axios.put(putUrl, JSON.stringify(profileData));
     } catch (err) {
       console.log(err);
     }
