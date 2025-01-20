@@ -44,6 +44,7 @@ const Signup = () => {
             }else {
             const data = await response.json();
             dispatch(addUser(data.user));
+            alert('Registration successful!');
             navigate('/login')
         }
         } catch (error) {
