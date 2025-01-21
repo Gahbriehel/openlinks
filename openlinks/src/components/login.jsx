@@ -54,7 +54,7 @@ const Login = () => {
       }
       else {
         setError(data.message)
-      } 
+      }
     } catch (error) {
       console.log('Error', error);
       setError("An error occurred.")
