@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# OpenLinks WebApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+OpenLinks is a React-based e-commerce platform that connects users with high-quality laptops, accessories, and technology solutions. The project emphasizes efficiency, modern design, and seamless user experience, leveraging cutting-edge technologies and best practices.
 
-## Available Scripts
+This project was initially created using Create React App (CRA) but has been successfully migrated to Vite for faster builds and a better development experience.
 
-In the project directory, you can run:
+## Features
+- **Product Management:** Browse a diverse catalog of laptops with detailed descriptions and pricing.
+- **Search Functionality:** Quickly find products using the search bar.
+- **Responsive Design:** Fully optimized for desktop, tablet, but not for mobile devices.
+- **Dynamic FAQ Section:** Clear and helpful answers for common queries.
+- **Test Checkout:** No payment processing has been implemented, only a test checkout feature.
 
-### `npm start`
+## Technologies Used
+### Frontend
+- [React](https://reactjs.org/) for building the user interface.
+- [React Router](https://reactrouter.com/) for navigation.
+- [React Icons](https://react-icons.github.io/react-icons/) for consistent iconography.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Development Tools
+- [Vite](https://vitejs.dev/) for fast builds and hot module replacement.
+- [JSON Server](https://github.com/typicode/json-server) for simulating APIs during development. - For testing before backend APIs were ready
+- [CSS Modules](https://github.com/css-modules/css-modules) for styling components.
+- [OpenLinks Backend] (https://github.com/donumeh/open_link-backend) - All APIs are hosted here
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
+- This project has been temporarily deployed on [Vercel] (https://openlinks-git-main-gahbriehels-projects.vercel.app/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+Make sure you have the following installed on your system:
+- [Node.js](https://nodejs.org/) (version 14 or higher, recommended Node 18)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### `npm run build`
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/openlinks-webapp.git
+   cd openlinks-webapp
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the Development Server
+Start the development server using Vite:
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Simulating an API with JSON Server
+1. Install JSON Server globally if not already installed:
+   ```bash
+   npm install -g json-server
+   ```
+2. Start the JSON Server:
+   ```bash
+   json-server --watch db.json --port 3001
+   ```
+3. Update API calls in the application to point to `http://localhost:3001`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Building for Production
+To create an optimized build for production:
+```bash
+npm run build
+```
+The build artifacts will be output to the `dist` folder.
 
-### `npm run eject`
+### Deploying the App
+You can deploy the app using services like [Netlify](https://www.netlify.com/), [Vercel](https://vercel.com/), or [AWS Amplify](https://aws.amazon.com/amplify/). Simply upload the contents of the `dist` folder.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Folder Structure
+```
+openlinks-webapp/
+├── public/               # Static assets
+├── src/                  # Source code
+│   ├── components/       # Reusable React components
+│   ├── pages/            # Page components
+│   ├── assets/           # Images and icons
+│   ├── styles/           # Global and component-specific CSS
+│   ├── utils/            # Utility functions
+│   ├── App.jsx           # Main App component
+│   └── main.jsx          # Vite entry point
+├── db.json               # Mock database for JSON Server
+├── package.json          # Project metadata and dependencies
+└── vite.config.js        # Vite configuration
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Scripts
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the application for production.
+- `npm run preview`: Preview the production build locally.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints (JSON Server)
+Here are some sample endpoints provided by the JSON Server:
+- **GET** `/laptops`: Fetch all laptops.
+- **GET** `/laptops/:id`: Fetch a specific laptop by ID.
+- **POST** `/laptops`: Add a new laptop.
+- **PUT** `/laptops/:id`: Update an existing laptop.
+- **DELETE** `/laptops/:id`: Delete a laptop by ID.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
+Contributions are welcome! If you'd like to contribute:
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Open a Pull Request.
 
-## Learn More
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
+- The Vite team for their exceptional tooling.
+- JSON Server for making API simulation effortless.
+- React Icons for their extensive library of icons.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+Feel free to reach out with any questions or feedback. Happy coding!
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
